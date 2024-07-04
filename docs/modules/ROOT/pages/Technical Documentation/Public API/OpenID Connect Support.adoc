@@ -306,7 +306,7 @@ payara.security.openid.extraParams.raw=key1=1%2C2&key2=value2
 ```
 
 ==== Replaced by `extraParametersExpression`
-The `extraParametersExpression` option was introduced in a manner similar to Jakarta 10 and later. If specified, this option is evaluated as an EL expression, e.g. it expects a bean returning the configuration. If it returns a list of strings, these strings are used in the form `"key=value"`. Values can use further expressions to be configurable at runtime.
+The `extraParametersExpression` option was introduced in a manner similar to Jakarta EE 10 and later. If specified, this option is evaluated as an EL expression, e.g. it expects a bean returning the configuration. If it returns a list of strings, these strings are used in the form `"key=value"`. Values can use further expressions to be configurable at runtime.
 
 Usage:
 
