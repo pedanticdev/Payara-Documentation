@@ -38,10 +38,10 @@ When defining a OpenID Connect flow within an application deployed on Payara Ser
 ----
 @WebServlet("/callback")
 public class CallbackServlet extends HttpServlet {
-    
+
     @Inject
     OpenIdContext context;
-    
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
@@ -61,7 +61,7 @@ public class CallbackServlet extends HttpServlet {
 }
 ----
 
-The original protected URL called is stored so that a redirect can be issued to this page after the callback from the OpenIdConnect provider is handled.  
+The original protected URL called is stored so that a redirect can be issued to this page after the callback from the OpenIdConnect provider is handled.
 
 NOTE: Only some basic redirect is supported namely a GET. Only the URL and query parameters are available, not the headers and the request body.
 
@@ -93,7 +93,7 @@ The annotation and MicroProfile properties has several configuration options. Th
 
 .Configuration Options for `@OpenIdAuthenticationDefinition
 |===
-| Option | MP Config property | Required/Type | Description | Default value | Requirements
+| Option | MP Config Property a| Required/Type | Description | Default value a| Requirements
 
 | `providerURI`
 | `payara.security.openid.providerURI`
@@ -225,33 +225,59 @@ The annotation and MicroProfile properties has several configuration options. Th
 | `payara.security.openid.proxyHostname`
 | `false`
 | Defines the hostname of the proxied server.
-| 
+|
 | N/A.
 
 | `proxyDefinition.port`
 | `payara.security.openid.proxyPort`
 | `false`
 | Defines the port of the proxied server.
-| 
+|
 | N/A.
 
 | `extraParameters`
+| `payara.security.openid.extraParams.raw`
+| `false`
+| An array of extra configuration parameters to be sent to the OpenID Connect provider.
+|
+a| This is an array of strings in the form `paramName=value`.
+
+The value also supports the use of EL expressions, so it is possible for each string to be defined as `paramName=#+{bean.parameterValue+}`.
+
+TIP: When defining this property using MP Configuration, the value of the entire property must correspond to a String that follows the standard URL query pattern, i.e. `param1=value1&param2=value2&param2=value+with+spaces`. +
+Key entries can be repeated.
+
+See the section <<extra-parameters-evaluation>> for more details.
+
+| `extraParametersExpression`
 |
 | `false`
-| An array of extra options to be sent to the OpenID Connect provider.
+| Overrides `extraParameters`, if specified, `extraParameters` is ignored. An array of extra options to be sent to the OpenID Connect provider.
 |
-| Must be in the form `key=value` and follow URL query pattern, i.e. `key1=value1&key2=value2&key2=value+with+spaces`. Key entries can be repeated
+a|Corresponds to an EL expression that can be used to set extra configuration parameters to be sent to the OpenID Connect provider.
+
+The expression must evaluate as either:
+
+* A list of strings which follows the same rules established for the `extraParameters` option
+* A comma separated list of `paramN=value` pairs.
+
+Example:
+
+----
+extraParametersExpression = "#+{securityBean.extraParams+}
+----
+
+See the section <<extra-parameters-evaluation>> for more details.
 
 | `logout`
 |
 | `@LogoutDefinition`
 | Defines the functionality that is performed when the user logs out and defines the RP Session Management configuration.
 |
-| 
+|
 |===
 
-NOTE: If both an annotation attribute and a MicroProfile Config property are defined for the same option
-then the MicroProfile Config property value always takes precedence over the `@OpenIdAuthenticationDefinition` annotation value.
+NOTE: If both an annotation attribute and a MicroProfile Config property are defined for the same option then the MicroProfile Config property value always takes precedence over the `@OpenIdAuthenticationDefinition` annotation value.
 
 .Configuration Options For `@OpenIdProviderMetadata`
 |===
@@ -260,12 +286,12 @@ then the MicroProfile Config property value always takes precedence over the `@O
 | `endSessionEndpoint`
 | `payara.security.openid.provider.endSessionEndpoint`
 | OIDC provider’s logout endpoint URL. If set, overrides the URL obtained via the `end_session_endpoint` element of the OIDC provider’s metadata.
-|  
+|
 
 | `disableScopeValidation`
 | `payara.security.openid.disableScopeValidation`
 | This property disables the scope validation for custom scope configurations
-| false 
+| false
 |===
 
 [[el-support]]
@@ -286,6 +312,100 @@ public class SecurityBean {
 ----
 
 IMPORTANT: By default, the EL expressions are evaluated only once after the application is loaded and the evaluated values are then remembered until the application is reloaded, for performance reasons. This means that although the configuration can be evaluated dynamically the first time it's needed, it's not possible to change the configuration later on. If you need to dynamically modify the configuration during the lifetime of the application, follow the next section about multi-tenancy support.
+
+[[extra-parameters-evaluation]]
+=== Evaluation of Extra Parameters
+
+There are multiple ways to configure extra parameters set for the OpenID Connect provider using both Expression Language and Microprofile Configuration properties.
+
+Each of the following sources is evaluated in order to determine how extra parameters are set for an active OpenID Connect security context:
+
+==== 1. MP Configuration Property
+
+The annotation supports the `payara.security.openid.extraParams.raw` MP Config property (see `OpenIdAuthenticationDefinition.OPENID_MP_EXTRA_PARAMS_RAW`) which accepts a text string in the format of URL-encoded parameters.
+
+TIP: When configured, this property takes precedence over other extra parameter sources.
+
+Here's an example on the standard MP Configuration properties file:
+
+[source, properties]
+----
+payara.security.openid.extraParams.raw=key1=1%2C2&key2=value2
+----
+
+==== 2. Use of `extraParametersExpression` attribute
+
+When this attribute is specified in the `@OpenIDAuthenticationDefinition` annotation, it is evaluated as an EL expression, e.g. it expects a bean returning the configuration.
+
+The parameters are configured depending on the resolved bean value:
+
+* If the resolved value corresponds to a list of strings, each string corresponds to the `paramName=value` format.
+* If the expression results in a single string, it must be in comma-separated format (`param1=value1,param2=value2"`).
+* Any other format will result in an error.
+
+TIP: Values can use further expressions to be configurable at runtime.
+
+Here's an example of using this attribute in the annotation:
+
+[source, java]
+----
+@OpenIdAuthenticationDefinition(
+       providerURI = "https://sample-openid-server.com",
+       clientId = "87068hgfg5675htfv6mrucov57bknst.apps.sample.com",
+       clientSecret = "{my-secret}",
+       redirectURI = "${baseURL}/callback",
+       extraParametersExpression = "#{securityConfigBean.extraParametersArray}"
+)
+public class SecurityBean {
+
+}
+----
+
+And here's the referenced bean used in the expression:
+
+[source, java]
+----
+public class SecurityConfigBean {
+    public String[] getExtraParametersArray() {
+        return new String[]{"key1=value1", "key2=#{value2}"};
+    }
+}
+----
+
+==== 3. Use of `extraParameters` attribute
+
+If the previous sources are not configured, then the `extraParameters` attribute in the `@OpenIdAuthenticationDefinition` is used.
+
+This attribute corresponds to String array, which each string following the format `paramName=value`:
+
+[source, java]
+----
+@OpenIdAuthenticationDefinition(
+       providerURI = "https://sample-openid-server.com",
+       clientId = "87068hgfg5675htfv6mrucov57bknst.apps.sample.com",
+       clientSecret = "{my-secret}",
+       redirectURI = "${baseURL}/callback",
+       extraParameters = {"param1=value1", "param2=value2"}
+)
+public class SecurityBean {
+
+}
+----
+
+Additionally, each value can reference EL expressions:
+
+[source, java]
+----
+@OpenIdAuthenticationDefinition(
+       providerURI = "https://sample-openid-server.com",
+       clientId = "87068hgfg5675htfv6mrucov57bknst.apps.sample.com",
+       clientSecret = "{my-secret}",
+       redirectURI = "${baseURL}/callback",
+       extraParameters = {"param1=#{securityConfigBean.value1}", "param2=#{securityConfigBean.value2}"}
+)
+public class SecurityBean {
+}
+----
 
 [[multitenancy]]
 == Multi-tenancy Support (Session-scoped Configuration)
@@ -378,7 +498,7 @@ With the `logout` parameter of the `OpenIdAuthenticationDefinition` you can defi
 
 .Configuration Options
 |===
-| Option | MP Config property | Required | Description | Default value 
+| Option | MP Config property | Required | Description | Default value
 
 | `notifyProvider`
 | `payara.security.openid.provider.notify.logout`
@@ -395,7 +515,7 @@ If `true` then after having logged out the user from RP, redirects the End-User'
    the End-User's User Agent be redirected after a logout has been
    performed. If redirect URI is empty then redirect to OpenID connect
   provider _authorization_endpoint_ for re-authentication.
-| 
+|
 
 | `accessTokenExpiry`
 | `payara.security.openid.logout.access.token.expiry`
@@ -417,7 +537,7 @@ If `fish.payara.security.annotations.LogoutDefinition#notifyProvider` is set to 
 After a successful logout, the End-User's User Agent redirects back to the RP's `_post_redirect_uri_` configured via the `fish.payara.security.annotations.LogoutDefinition#redirectURI` property.
 
 [[proxy-support]]
-=== Proxy Definition 
+=== Proxy Definition
 
 Using the `proxyDefinition` parameter of the `@OpenIdAuthenticationDefinition` annotation, you can specify details regarding proxy mapping within the OpenID Connect client configuration. It contains attributes to specify the `hostName` and `port` of the proxied server. This addition facilitates the configuration of proxy mapping for requests traversing through reverse web proxies.
 
@@ -556,7 +676,7 @@ The Payara Platform Public API also provides a `fish.payara.security.openid.api.
 - The `getCallerName()` method - Gets the caller name of the currently authenticated user.
 - The `getCallerGroups()` method - Gets the groups associated with the caller.
 - The `getSubject()` method - Subject Identifier. A locally unique and never reassigned identifier within the Issuer for the End-User, which is intended to be consumed by the Client.
-- The `getTokenType()` method - Gets the token type value. The value MUST be `Bearer` or another token type value that the client has negotiated with the authorization server. 
+- The `getTokenType()` method - Gets the token type value. The value MUST be `Bearer` or another token type value that the client has negotiated with the authorization server.
 - The `getAccessToken()` method - Gets the authorization token that was received from the OpenId Connect provider.
 - The `getIdentityToken()` method - Gets the identity token that was received from the OpenId Connect provider.
 - The `getRefreshToken()` method - Returns the refresh token that is used by OIDC client to get a new access token.
@@ -694,7 +814,7 @@ The Payara Public API provides built-in support for Google OpenID Provider via t
 [[google-refresh-token]]
 ==== Request Refresh Token
 
-To enable the refresh token feature, set the `tokenAutoRefresh` to true and add the `access_type` parameter value to `offline` so that application can refresh access tokens when the user is not present at the browser. 
+To enable the refresh token feature, set the `tokenAutoRefresh` to true and add the `access_type` parameter value to `offline` so that application can refresh access tokens when the user is not present at the browser.
 
 If application requests `offline` access then the application can receive access and refresh token. Once the application has a refresh token, it can obtain a new access token at any time or as older ones expire. Otherwise, If application requests `online` access, your application will only receive an access token
 
