@@ -52,19 +52,7 @@ IMPORTANT: If you have selected to use SQS Connector 2.1.0, replace all occurunc
 [[v2-usage]]
 === Usage
 
-[source, shell]
-----
-git clone git@github.com:payara/Cloud-Connectors.git
-cd Cloud-Connectors/
-git checkout tags/AmazonSQS-2.1.0
-mvn clean install
-----
-
-The connector's RAR artifact can be found in the following location:
-
-----
-./AmazonSQS/AmazonSQSRAR/target/amazon-sqs-rar-2.1.0.rar
-----
+The `amazon-sqs-rar-2.1.0.rar` JCA adapter can be downloaded from https://mvnrepository.com/artifact/fish.payara.cloud.connectors.amazonsqs/amazon-sqs-rar/2.1.0[Maven Central], and has to be deployed as shown in the xref:/Technical Documentation/Ecosystem/Connector Suites/Cloud Connectors/Overview.adoc#Installing-a-connector[Installing a connector section] of the Cloud Connectors overview.
 
 Additionally, to use the connector API add the following Maven dependencies to your application's project:
 
