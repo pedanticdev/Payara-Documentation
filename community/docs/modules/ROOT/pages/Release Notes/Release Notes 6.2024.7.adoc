@@ -12,7 +12,6 @@
 
 * [https://github.com/payara/Payara/pull/6784[FISH-8855]] Add Auto Name option to Admin UI while creating a new deployment group
 
-
 == Bug Fixes
 
 * [https://github.com/payara/Payara/pull/6544[FISH-6472]] [Community Contribution - https://github.com/myresd[myresd]] Fix Exception When Datasource Isolationlevel `TRANSACTION_READ_UNCOMMITTED` is Used
@@ -33,10 +32,6 @@
 
 * [https://github.com/payara/Payara/pull/6802[FISH-8953]] Fix Incorrect Unprocessed Change Showing for Hazelcast Encryption Settings
 
-
-
-
-
 == Component Upgrades
 
 * [https://github.com/payara/Payara/pull/6755[FISH-8856]] Upgrade Jakarta XML WS API to 4.0.2
@@ -52,16 +47,3 @@
 * [https://github.com/payara/Payara/pull/6788[FISH-8934]] Upgrade Angus Mail to 1.1.0
 
 * [https://github.com/payara/Payara/pull/6803[FISH-8954]] Upgrade EclipseLink ASM to 9.7
-
-
-
-
-
-
-
-
-
-
-
-
-
