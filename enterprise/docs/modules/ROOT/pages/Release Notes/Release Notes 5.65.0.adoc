@@ -6,7 +6,6 @@
 * Jakarta EE 8 Applications
 * MicroProfile 4.1
 
-
 == Improvements
 
 * [FISH-8260 ]Add extraParametersExpression parameter for @OpenIdAuthenticationDefinition in Payara API
@@ -14,9 +13,6 @@
 * [FISH-8342] Support YAML format for Hazelcast Configuration file
 
 * [FISH-8855] Auto Name Deployment Group
-
-
-
 
 == Bug Fixes
 * [FISH-6472] [Community Contribution - https://github.com/myresd[myresd]] Fix Exception When Datasource Isolationlevel `TRANSACTION_READ_UNCOMMITTED` is Used
@@ -34,8 +30,6 @@
 * [FISH-8794] Fix Data grid members not showing in Admin Console of Payara Server running on Docker
 
 * [FISH-8953] Fix Incorrect Unprocessed Change Showing for Hazelcast Encryption Settings
-
-
 
 == Component Upgrades
 * [FISH-8682] Upgrade JNA to 5.14.0
