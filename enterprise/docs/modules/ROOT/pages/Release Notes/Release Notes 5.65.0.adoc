@@ -8,7 +8,7 @@
 
 == Improvements
 
-* [FISH-8260 ]Add extraParametersExpression parameter for @OpenIdAuthenticationDefinition in Payara API
+* [FISH-8260] Add extraParametersExpression parameter for @OpenIdAuthenticationDefinition in Payara API
 
 * [FISH-8342] Support YAML format for Hazelcast Configuration file
 
