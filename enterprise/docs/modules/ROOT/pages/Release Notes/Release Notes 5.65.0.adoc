@@ -49,8 +49,3 @@
 * [FISH-8952] Upgrade Felix Web Console to 4.9.8
 
 * [FISH-8954] Upgrade EclipseLink ASM to 9.7
-
-
-
-
-
