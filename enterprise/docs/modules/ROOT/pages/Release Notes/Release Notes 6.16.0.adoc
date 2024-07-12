@@ -6,7 +6,6 @@
 * Jakarta EE 10 Applications
 * MicroProfile 6.1
 
-
 == Improvements
 
 * [FISH-8342] Support YAML format for Hazelcast Configuration file
@@ -33,10 +32,6 @@
 
 * [FISH-8953] Fix Incorrect Unprocessed Change Showing for Hazelcast Encryption Settings
 
-
-
-
-
 == Component Upgrades
 
 * [FISH-8856] Upgrade Jakarta XML WS API to 4.0.2
@@ -52,5 +47,3 @@
 * [FISH-8934] Upgrade Angus Mail to 1.1.0
 
 * [FISH-8954] Upgrade EclipseLink ASM to 9.7
-
-
