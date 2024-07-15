@@ -1,0 +1,6 @@
+[[javadoc]]
+= Javadoc
+
+The Javadoc for the most recent version of the Payara Micro API can be
+found here:
+https://javadoc.io/doc/fish.payara.extras/payara-micro

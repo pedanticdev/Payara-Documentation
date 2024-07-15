@@ -1,0 +1,15 @@
+= Protocols
+:page-toclevels: 3
+
+A protocol is used by a network listener to determine the nature of the communication
+expected by the listener. For example, a protocol determines the timeout of a request,
+as well as whether HTTPS should be used. The reason the protocol is separate to the
+listener is so that the same protocol configuration can be used to listen on multiple
+ports.
+
+Existing protocols can be configured from the admin console or with asadmin
+commands. The protocol configurations can be found in the admin console under
+*Configurations* -> *your-config* -> *Network Config* -> *Protocols*.
+
+image::http/protocol-config.png[Configuration Page Location]
+

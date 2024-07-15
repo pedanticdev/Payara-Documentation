@@ -2,22 +2,10 @@
 
 Official technical documentation repository of the Payara Platform. All documentation material is written in Asciidoctor format.
 
-This documentation repository is structured in conformance to **Antora version 3.0** format: https://docs.antora.org/antora/3.0/. This repository is used to generate all the HTML pages that are published at https://docs.payara.fish/community/ as configured in the https://github.com/payara/payara-documentation-playbook [Payara Documentation's Antora Configuration Repository]. 
+This branch is *used exclusively* to host the release notes of Payara Enterprise Platform patches for version `4.1.2.x` and it *should not be used to generate the documentation sites for this version*, as this branch will be adapted for future content generation.
 
-The general layout of this repository is a composition of the following Antora-style components:
+TODO:
 
-`docs`:: Base component that contains the documentation of feature sets that apply to all editions of the Payara Platform.
-`community`:: Specialized component that contains documentation content for Community Edition specifics
-`enterprise`:: Specialized component that contains documentation content for Enterprise Edition specifics
+* Move remaining `4.1.x.y` version patch notes to this branch.
+* Restructure this branch to generate documentation for Payara Server `4.1.2.191.x`
 
-== Branches
-
-All branches of this repository correspond to official releases of:
-
-* Payara Community Edition **5.2022.2** and superior releases.
-* Payara Enterprise Edition **5.39.0** and superior releases.
-
-Older releases are stored in the following archived repositories:
-
-* https://github.com/payara/Payara-Community-Documentation[Community Edition]
-* https://github.com/payara/Payara-Enterprise-Documentation[Enterprise Edition]
