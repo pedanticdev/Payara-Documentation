@@ -18,6 +18,8 @@
 
 * [https://github.com/payara/Payara/pull/6754[FISH-8334]] [Data Grid] Can't start 2nd instance on the node when Auto Increment Port is disabled.
 
+* [https://github.com/payara/Payara/pull/6775[FISH-8399]] Symbolic links do not work when allowLinking property is set to true
+
 * [https://github.com/payara/Payara/pull/6753[FISH-8437]] Fix asadmin --help command failure
 
 * [https://github.com/payara/Payara/pull/6677[FISH-8672]] [Community Contribution - https://github.com/lprimak[lprimak]] Fix Class Loader Leaks

@@ -18,6 +18,8 @@
 
 * [FISH-8334] [Data Grid] Can't start 2nd instance on the node when Auto Increment Port is disabled.
 
+* [FISH-8399] Symbolic links do not work when allowLinking property is set to true
+
 * [FISH-8437] Fix asadmin --help command fails
 
 * [FISH-8672] [Comm unity Contribution - https://github.com/lprimak[lprimak]] Fix Class Loader Leaks
