@@ -22,7 +22,7 @@
 
 * [FISH-8437] Fix asadmin --help command fails
 
-* [FISH-8672] [Comm unity Contribution - https://github.com/lprimak[lprimak]] Fix Class Loader Leaks
+* [FISH-8672] [Community Contribution - https://github.com/lprimak[lprimak]] Fix Class Loader Leaks
 
 * [FISH-8728] [Community Contribution - https://github.com/pzygielo[pzygielo]] Allow Host in JDWP Agent Address
 
