@@ -90,6 +90,7 @@ The `set-hazelcast-configuration` command can be used to set the configuration f
 ----
 asadmin> set-hazelcast-configuration --hazelcastconfigurationfile /path/to/file
 ----
+NOTE: The hazelcast configuration file *must be* in XML or YAML format.
 
 As with the admin console, this path is relative to your domain configuration directory.
 
