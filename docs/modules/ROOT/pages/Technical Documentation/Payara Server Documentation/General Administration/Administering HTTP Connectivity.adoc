@@ -108,7 +108,7 @@ The following fields can be configured for network listeners:
 
 | Status
 | The status of the network listener. This determines whether the listener will be actively listening for requests.
-| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.status=[true/false]`
+| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.enabled=[true/false]`
 
 | JK Enabled
 | Whether mod_jk support should be enabled for this listener. Should only be enabled if mod_jk is being explicitly configured on an Apache Web Server in conjunction with Payara Server.
