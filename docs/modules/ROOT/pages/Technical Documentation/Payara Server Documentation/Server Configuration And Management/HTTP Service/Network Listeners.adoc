@@ -43,7 +43,7 @@ The status of the network listener. This determines whether the listener will be
 
 *Asadmin Command:*
 
-`set configs.config.server-config.network-config.network-listeners.network-listener.${network-listener-name}.status=[true/false]`
+`set configs.config.server-config.network-config.network-listeners.network-listener.${network-listener-name}.enabled=[true/false]`
 
 ---
 [[configuration-jk-listener]]
@@ -109,7 +109,7 @@ The thread pool used by the network listener. This determines the pool of thread
 [[sni]]
 == Server Name Indication - SNI
 
-Server Name Indication, SNI for short, allows you to use multiple SSL certificates with the same IP address. When enabled, the server will look for a certificate in the configured keystore using a nickname that matches the host name requested.  
+Server Name Indication, SNI for short, allows you to use multiple SSL certificates with the same IP address. When enabled, the server will look for a certificate in the configured keystore using a nickname that matches the host name requested.
 
 SNI can be enabled by configuring a network listener. Existing network listeners can be configured from the admin console or with asadmin commands. The network listener configurations can be found in the admin console under *Configurations -> <your-config> -> Network Config -> Network Listeners*.
 
