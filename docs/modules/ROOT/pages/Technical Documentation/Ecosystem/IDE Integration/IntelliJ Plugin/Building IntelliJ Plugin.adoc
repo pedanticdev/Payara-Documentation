@@ -1,15 +1,15 @@
 [[building-intellij-ide-plugin]]
-= Building Payara Tools IntelliJ IDEA IDE Plugin
+= Building Payara IntelliJ Tools
 
 The process of building and testing the IntelliJ IDEA IDE Plugin, is the same for both the Ultimate and Community versions of the plugin. After cloning the appropriate repository, the following steps can be applied to either plugin.
 
-The Payara Tools IntelliJ Community IDE Extension source code is available in the https://github.com/payara/ecosystem-intellij-community-plugin[Ecosystem IntelliJ Community repository].
+The Payara IntelliJ Community Tools source code is available in the https://github.com/payara/ecosystem-intellij-community-plugin[Ecosystem IntelliJ Community repository].
 
-The Payara Tools IntelliJ Ultimate IDE Extension source code is available in the https://github.com/payara/ecosystem-intellij-ultimate-plugin[Ecosystem IntelliJ Ultimate repository].
+The Payara IntelliJ Ultimate Tools source code is available in the https://github.com/payara/ecosystem-intellij-ultimate-plugin[Ecosystem IntelliJ Ultimate repository].
 
 [[building-intellij-plugin-prequisites]]
 == Prerequisites
-Before building the Payara Tools IntelliJ IDEA plugin, you will need to configure your local environment. Subsequent builds will not require these steps.
+Before building the Payara IntelliJ Tools, you will need to configure your local environment. Subsequent builds will not require these steps.
 
 Clone the relevant repository::
 You must first clone the appropriate repository for the IntelliJ IDEA plugin you are trying to build.
@@ -18,11 +18,11 @@ JDK 11::
 JDK 11 is required to build and test the IntelliJ IDEA plugin.
 
 Install Gradle::
-Gradle is the build tool for the Payara Tools IntelliJ IDEA plugin. You can either download and configure Gradle locally or use the Gradle wrapper in the source code.
+Gradle is the build tool for the Payara IntelliJ Tools. You can either download and configure Gradle locally or use the Gradle wrapper in the source code.
 
 [[building-intellij-plugin]]
-== Build Payara Tools
-To build the Payara Tools IntelliJ IDEA plugin, run the following command from the root directory where the project was cloned:
+== Build Payara IntelliJ Tools
+To build the Payara IntelliJ Tools, run the following command from the root directory where the project was cloned:
 
 *If you installed Gradle*
 
