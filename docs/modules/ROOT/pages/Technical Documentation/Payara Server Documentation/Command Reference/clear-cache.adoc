@@ -46,7 +46,7 @@ Name of the cache/map to clear.
 
 [source, shell]
 ----
-asadmin> clear-cache --name payara.instance.store
+asadmin> clear-cache --cachename payara.instance.store
 Cleared Cache payara.instance.store
 Command clear-cache executed successfully.
 ----
