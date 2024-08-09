@@ -11,7 +11,7 @@ Clears a Hazelcast or JCache IMap.
 asadmin [asadmin-options] clear-cache
 [--help]
 [--target target]
-[--name name]
+[--cachename cachename]
 ----
 
 [[description]]
@@ -36,7 +36,7 @@ This option helps specify the target on which you are executing this operation. 
 Applies to the default server instance. This is the default value.
 instance_name;;
 Applies to a specified server instance.
-`--name`::
+`--cachename`::
 Name of the cache/map to clear.
 
 [[examples]]
@@ -46,7 +46,7 @@ Name of the cache/map to clear.
 
 [source, shell]
 ----
-asadmin> clear-cache --name payara.instance.store
+asadmin> clear-cache --cachename payara.instance.store
 Cleared Cache payara.instance.store
 Command clear-cache executed successfully.
 ----
