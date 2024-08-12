@@ -1,0 +1,31 @@
+= Release notes - Payara Platform Enterprise 5.66.0
+
+== Supported APIs and Applications
+
+* Jakarta EE 8
+* Jakarta EE 8 Applications
+* MicroProfile 4.1
+
+== Bug Fixes
+
+* [FISH-8887] Fix Typo in `clear-cache` REST Endpoint
+
+* [FISH-8888] Fix Incorrect Method Type and Parameters in `clear-cache` Command REST Endpoint
+
+* [FISH-9098] Fix application reference getting deployed to untargeted instance during domain restart
+
+
+== Component Upgrades
+
+
+* [FISH-8557] Upgrade JLine to 3.26.3
+
+* [FISH-8656] Upgrade Tyrus to 1.21
+
+* [FISH-8679] Upgrade Jersey to 2.43
+
+* [FISH-8681] Upgrade Nimbus Jose JWT to 9.39.1
+
+* [FISH-9064] Upgrade Mojarra to 2.3.21
+
+* [FISH-9071] Upgrade Jackson to 2.17.2
