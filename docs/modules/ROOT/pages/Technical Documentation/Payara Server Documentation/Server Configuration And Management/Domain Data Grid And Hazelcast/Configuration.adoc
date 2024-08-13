@@ -546,10 +546,10 @@ Lists the Hazelcast distributed caches in the cluster
 Clears a Hazelcast or JCache IMap
 
 *Usage*::
-`asadmin> clear-cache <cacheName>`
+`asadmin> clear-cache --cacheName <cacheName> --key <key>`
 
-WARNING: Use of this command removes all data from a cache and therefore can result in unexpected behaviour if a system cache is cleared. Clearing a cache
-containing web session data will result in all users losing their sessions, for example.
+WARNING: Use of this command removes all data from a cache and therefore can result in unexpected behaviour if a system cache is cleared. +
+Clearing a cache containing web session data will result in all users losing their sessions, for example.
 
 [[create-hazelcast-instance]]
 === `create-hazelcast-instance`
