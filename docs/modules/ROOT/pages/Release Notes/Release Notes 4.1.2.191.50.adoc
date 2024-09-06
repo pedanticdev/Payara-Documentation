@@ -1,0 +1,11 @@
+= Release Notes - Payara Platform Enterprise 4.1.2.191.50
+
+
+== Security Fixes
+* [FISH-9112] REST Interface Link Redirection via Host parameter
+
+* [FISH-9197] Sensitive information exposure when the org.glassfish.admingui LOGGER is set to FINEST level
+
+
+== Component Upgrades
+* [FISH-9581] Upgrade Docker JDK to 8u422
