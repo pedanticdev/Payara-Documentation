@@ -14,6 +14,8 @@ asadmin [asadmin-options] collect-diagnostics [--help]
 [--target=target]
 [--dir=<file-path>]
 [--serverLog={false|true}]
+[--accessLog={false|true}]
+[--notificationLog={false|true}]
 [--domainXml={false|true}]
 [--threadDump={false|true}]
 [--heapDump={false|true}]
@@ -30,6 +32,8 @@ Among the data collected is the following information:
 
 * `domain.xml` configuration file
 * Server logs
+* Access logs
+* Notification logs
 * A JVM thread dump.
 * A JVM Heap Dump
 * JVM Report
@@ -67,6 +71,10 @@ The directory path where the ZIP file will be stored. Defaults to `$+{user.home}
 Whether to collect the `domain.xml` configuration file. Defaults to `true`.
 `--serverLog`::
 Whether to collect server logs. Defaults to `true`
+`--accessLog`::
+Whether to collect access logs. Defaults to `true`
+`--notificationLog`::
+Whether to collect notification logs. Defaults to `true`
 `--heapDump`::
 Whether to collect a heap dump. Defaults to `true`
 `--threadDump`::
