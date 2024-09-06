@@ -5,7 +5,7 @@ The following is a list of reported _**C**ommon **V**ulnerabilities and **E**xpo
 
 [cols="<,<,<,<,<,<,<",options="header",]
 |=======================================================================
-|ID |CVSS Score |Status |Summary |Release |Pull Requests |Observations
+|ID |link:https://nvd.nist.gov/vuln-metrics/cvss[CVSS Score] |Status |Summary |Release |Pull Requests |Observations
 
 |https://nvd.nist.gov/vuln/detail/CVE-2022-0265[CVE-2022-0265] | 9.8 | FIXED | Improper Restriction of XML External Entity Reference in GitHub repository hazelcast/hazelcast in 5.1-BETA-1.  ||| This can only be triggered if explicitly using hazelcast to parse XML data.
 
@@ -33,7 +33,7 @@ The following is a list of reported _**C**ommon **V**ulnerabilities and **E**xpo
 
 |https://nvd.nist.gov/vuln/detail/CVE-2021-41381[CVE-2021-41381]  | 5.3 | FIXED | Improper Limitation of a pathname to a restricted directory (exposes an application to "Path Traversal") when context root is / | 5.2021.7 | https://github.com/payara/Payara/pull/5396[#5396] | Recommended to immediately upgrade to this release if any of your applications is deployed on the `/` context root on Payara Server or Payara Micro
 
-|https://nvd.nist.gov/vuln/detail/CVE-2021-28170[CVE-2021-28170] | 5.3 | FIXED | A bug in the ELParserTokenManager enables invalid EL expressions to be evaluated as if they were valid | 5.2021.5 | https://github.com/eclipse-ee4j/el-ri/pull/160[el-ri #160] | Fixed by backporting a fix from the latest Jakarta Expression Language snapshot version 
+|https://nvd.nist.gov/vuln/detail/CVE-2021-28170[CVE-2021-28170] | 5.3 | FIXED | A bug in the ELParserTokenManager enables invalid EL expressions to be evaluated as if they were valid | 5.2021.5 | https://github.com/eclipse-ee4j/el-ri/pull/160[el-ri #160] | Fixed by backporting a fix from the latest Jakarta Expression Language snapshot version
 
 |https://nvd.nist.gov/vuln/detail/CVE-2020-10693[CVE-2020-10693] | 5.3 | FIXED | A flaw was found in Hibernate Validator version 6.1.2.Final. A bug in the message interpolation processor enables invalid EL expressions to be evaluated as if they were valid. This flaw allows attackers to bypass input sanitation (escaping, stripping) controls. | 5.2020.7 | https://github.com/payara/Payara/pull/4977[#4977] | Fixed by upgrading Hibernate Validator to 6.1.5
 
@@ -41,7 +41,7 @@ The following is a list of reported _**C**ommon **V**ulnerabilities and **E**xpo
 
 |https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-6950[CVE-2020-6950] | 7.5 | FIXED | Eclipse Mojarra vulnerable to path transversal flaw via either loc/con parameters | 5.201 | https://github.com/payara/Payara/pull/4492[#4492] | Fixed by upgrading Mojarra to 2.3.14
 
-|https://nvd.nist.gov/vuln/detail/CVE-2019-12086[CVE-2019-12086] | 7.5 | FIXED | A Polymorphic Typing issue was discovered in FasterXML jackson-databind 2.x before 2.9.9 | 5.193, 5.192.1, 5.191.4 | https://github.com/payara/Payara/pull/4004[#4004] | 
+|https://nvd.nist.gov/vuln/detail/CVE-2019-12086[CVE-2019-12086] | 7.5 | FIXED | A Polymorphic Typing issue was discovered in FasterXML jackson-databind 2.x before 2.9.9 | 5.193, 5.192.1, 5.191.4 | https://github.com/payara/Payara/pull/4004[#4004] |
 
 |https://nvd.nist.gov/vuln/detail/CVE-2018-14721[CVE-2018-14721] | 10.0 | FIXED | FasterXML jackson-databind 2.x before 2.9.7 might allow remote attackers to conduct server-side request forgery (SSRF) attacks | 5.191, 5.184.1, 5.181.10, 4.1.2.191, 4.1.2.184.1, 4.1.2.181.10 | https://github.com/payara/Payara/pull/3461[#3461], https://github.com/payara/Payara/pull/3513[#3513] | Fixed in *FasterXML Jackson 2.9.7*, component updated
 
@@ -94,7 +94,7 @@ Here is a collection of historic non-**CVE** vulnerabilities that may warrant at
 |Reference |Status |Summary | Release |Pull Requests |Observations
 |FISH-6775| FIXED | Authorization Constraints Ignored When Using Path Traversal Penetration Using Default Virtual Module | 5.2022.5 | https://github.com/payara/Payara/pull/6079[#6079] |
 |sonatype-2014-0173| FIXED | commons-fileupload version 1.3.3 has a potential resource leak issue | 5.2022.4 | https://github.com/payara/Payara/pull/5934[#5934] | Fixed by upgrading commons-fileupload to 1.4
-|Payara Enterprise Support Ticket| FIXED | Vulnerability in Metro's WSDL Code Importing/Parsing - Remote Code Execution | 5.2021.3 | [https://github.com/payara/Payara/pull/5198[#5198]] | Recommended to immediately upgrade to this release if using any JAX-WS features in applications deployed in public-facing environments. 
+|Payara Enterprise Support Ticket| FIXED | Vulnerability in Metro's WSDL Code Importing/Parsing - Remote Code Execution | 5.2021.3 | [https://github.com/payara/Payara/pull/5198[#5198]] | Recommended to immediately upgrade to this release if using any JAX-WS features in applications deployed in public-facing environments.
 |https://www.owasp.org/index.php/Clickjacking_Defense_Cheat_Sheet[OWASP Docs] |FIXED | Web administration console is vulnerable against clickjacking/UI redress attacks. | 4.1.2.174 | https://github.com/payara/Payara/pull/2097[#2097] |
 |Payara Support Ticket | FIXED | Under some circumstances authenticated caller/user identities get confused. | 4.1.1.171.11 | https://github.com/payara/Payara/pull/2493/files[#2493] |
 |Payara Support Ticket | FIXED | CORBA security context gets corrupted under certain conditions | 4.1.2.181.2, 4.1.2.182, 5.182 |https://github.com/payara/Payara/pull/2493[#2493]|
