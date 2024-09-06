@@ -1,0 +1,48 @@
+= Release notes - Payara Platform Enterprise 5.67.0
+
+== Supported APIs and Applications
+
+* Jakarta EE 8
+* Jakarta EE 8 Applications
+* MicroProfile 4.1
+
+
+
+
+== Security Fixes
+
+* [FISH-9112] REST Interface Link Redirection via Host parameter
+
+* [FISH-9197] Sensitive information exposure when the org.glassfish.admingui LOGGER is set to FINEST level
+
+== Bug Fixes
+
+* [FISH-6579] GUI breaks and asadmin command gives "remote failure error..." while modifying TLS Settings for admin-listener and http-listener-1 on Payara Server
+
+* [FISH-9111] Required dependency of jackson-dataformat-xml is missing in micro and web
+
+* [FISH-9171] [Community Contribution - https://github.com/lprimak[lprimak]] Prevent Deployment Failures from Causing an Undeployment Failure and Leaks
+
+* [FISH-9186] Alternate Document Root not working on DFSN on Windows Server 2019
+
+* [FISH-9222] [Community Contribution - https://github.com/lprimak[lprimak]] Disable Monitoring Collection Before Server Shuts Down
+
+* [FISH-9456] Fix `Cannot find the resource bundle for the name com.sun.logging.enterprise.system.container.ejb`
+
+* [FISH-9502] Application reference is getting deployed to the untargeted instance during domain restart
+
+== Component Upgrades
+
+* [FISH-8504] Upgrade Classmate to 1.7.0
+
+* [FISH-9521] Bump org.apache.bcel:bcel from 6.7.0 to 6.10.0
+
+* [FISH-9523] Bump com.nimbusds:nimbus-jose-jwt from 9.39.1 to 9.40
+
+* [FISH-9579] Upgrade Docker JDK to 21.0.4
+
+* [FISH-9580] Upgrade Docker JDK to 11.0.24
+
+* [FISH-9581] Upgrade Docker JDK to 8u422
+
+* [FISH-9582] Upgrade Docker JDK to 17.0.12
