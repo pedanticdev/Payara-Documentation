@@ -43,13 +43,13 @@
 
 * [FISH-9464] Upgrade Angus Activation to 1.1.0
 
-* [FISH-9481] Payara: Bump io.projectreactor:reactor-core from 3.6.8 to 3.6.9
+* [FISH-9481] Bump io.projectreactor:reactor-core from 3.6.8 to 3.6.9
 
-* [FISH-9483] Payara: Bump org.eclipse:yasson from 3.0.3 to 3.0.4
+* [FISH-9483] Bump org.eclipse:yasson from 3.0.3 to 3.0.4
 
-* [FISH-9529] Payara: Bump org.apache.felix:org.apache.felix.webconsole from 5.0.2 to 5.0.6
+* [FISH-9529] Bump org.apache.felix:org.apache.felix.webconsole from 5.0.2 to 5.0.6
 
-* [FISH-9537] Payara: Bump org.jetbrains.kotlin:kotlin-stdlib from 2.0.0 to 2.0.20
+* [FISH-9537] Bump org.jetbrains.kotlin:kotlin-stdlib from 2.0.0 to 2.0.20
 
 * [FISH-9579] Upgrade Docker JDK to 21.0.4
 
