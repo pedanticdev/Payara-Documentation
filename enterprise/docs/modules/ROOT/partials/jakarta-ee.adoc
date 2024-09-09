@@ -3,7 +3,7 @@
 * 6.18.0
 ** xref:Jakarta EE Certification/6.18.0/6.18.0 Platform TCK Results.adoc[6.18.0 Platform TCK Results]
 ** xref:Jakarta EE Certification/6.18.0/6.18.0 (Web Profile) Web TCK Results.adoc[6.18.0 (Web Profile) Web TCK Results]
-** xref:Jakarta EE Certification/6.18.0/6.18.0 Core TCK Results.adoc[6.16.0 Core TCK Results]
+** xref:Jakarta EE Certification/6.18.0/6.18.0 Core TCK Results.adoc[6.18.0 Core TCK Results]
 ** xref:Jakarta EE Certification/6.18.0/6.18.0 (Web Profile) Core TCK Results.adoc[6.18.0 (Web Profile) Core TCK Results]
 * 6.17.0
 ** xref:Jakarta EE Certification/6.17.0/6.17.0 Platform TCK Results.adoc[6.17.0 Platform TCK Results]
