@@ -8,6 +8,7 @@ Detailed information about features and fixes in every release.
 
 *2024*
 
+* 2024 September - xref:Release Notes/Release Notes 6.2024.9.adoc[Payara Community 6.2024.9]
 * 2024 August - xref:Release Notes/Release Notes 6.2024.8.adoc[Payara Community 6.2024.8]
 * 2024 July - xref:Release Notes/Release Notes 6.2024.7.adoc[Payara Community 6.2024.7]
 * 2024 June - xref:Release Notes/Release Notes 6.2024.6.adoc[Payara Community 6.2024.6]
