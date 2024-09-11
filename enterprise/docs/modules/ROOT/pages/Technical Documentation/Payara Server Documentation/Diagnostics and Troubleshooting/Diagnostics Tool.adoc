@@ -5,13 +5,15 @@ Payara Server has a diagnostic tool that on demand collects the following inform
 
 * `domain.xml` configuration file
 * Server logs
+* Notification logs
+* Access logs
 * A JVM thread dump.
 * A JVM Heap Dump
 * JVM Report
 
 The collection of this data can be targeted towards specific a specific server instance, deployment group or cluster. By default, everything is collected from the DAS, each instance, deployment group and cluster configured in the domain.
 
-If the target(s) is(are) offline, only the `domain.xml` configuration file and server logs will be collected.
+If the target(s) is(are) offline, only the `domain.xml` configuration file, server, access and notification logs will be collected.
 
 NOTE: If you are not using the default _domain1_, you must specify the domain to collect diagnostics from.
 
@@ -41,6 +43,18 @@ asadmin> collect-diagnostics --serverlog={true|false} --domainxml={true|false} -
 |Description
 |Default
 |Mandatory
+
+|`--accesslog`
+|`Boolean`
+|Whether to collect access logs.
+|`true`
+|no
+
+|`--notificationlog`
+|`Boolean`
+|Whether to collect notification logs.
+|`true`
+|no
 
 |`--serverlog`
 |`Boolean`
@@ -112,11 +126,15 @@ deploymentGroup1
 │   ├── instance1-domain.xml
 │   ├── instance1-jvm-report.txt
 │   ├── instance1-server.log
+|   ├── instance1-notification.log
+│   ├── instance1-server_access_log.txt
 │   └── instance1-thread-dump.txt
 └── instance2
     ├── instance2-domain.xml
     ├── instance2-jvm-report.txt
     ├── instance2-server.log
+    ├── instance2-notification.log
+    ├── instance2-server_access_log.txt
     └── instance2-thread-dump.txt
 ----
 
