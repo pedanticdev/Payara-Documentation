@@ -44,6 +44,18 @@ asadmin> collect-diagnostics --serverlog={true|false} --domainxml={true|false} -
 |Default
 |Mandatory
 
+|`--accesslog`
+|`Boolean`
+|Whether to collect access logs.
+|`true`
+|no
+
+|`--notificationlog`
+|`Boolean`
+|Whether to collect notification logs.
+|`true`
+|no
+
 |`--serverlog`
 |`Boolean`
 |Whether to collect server logs.
