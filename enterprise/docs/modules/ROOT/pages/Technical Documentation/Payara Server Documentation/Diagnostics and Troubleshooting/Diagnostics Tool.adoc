@@ -26,6 +26,8 @@ The diagnostic tool can be used through the `collect-diagnostics` Asadmin CLI su
 
 Using this command will allow both customers and support staff to work faster on the investigation and analysis of production and development incidents.
 
+The obfuscate parameter will hide sensitive data in the `domain.xml` such as passwords, addresses and hostnames.
+
 NOTE: The data collected is stored in a ZIP file in your user home directory, the output directory by default.
 
 [source, shell]
@@ -158,6 +160,8 @@ asadmin> collect-diagnostics --target deploymentGroup1 mydomain
 Directory selected /home/user/payara/diagnostics/mydomain-2024-04-15T11-42-36Z
 Collecting domain.xml from instance2
 Attempting to create missing path at /home/user/payara/diagnostics/mydomain-2024-04-15T11-42-36Z/deploymentGroup1/instance1
+Obfuscating /home/user/payara/diagnostics/mydomain-2024-04-15T11-42-36Z/deploymentGroup1/instance1
+Successfully obfuscated /home/user/payara/diagnostics/mydomain-2024-04-15T11-42-36Z/deploymentGroup1/instance1
 Collecting logs from instance2
 Collecting jvm report from instance2
 Collecting thread dump from instance2
@@ -165,6 +169,8 @@ Collecting Heap Dump from instance2
 This version of Payara does not support heap dump generation.
 Collecting domain.xml from instance1
 Attempting to create missing path at /home/user/payara/diagnostics/mydomain-2024-04-15T11-42-36Z/deploymentGroup1/instance1
+Obfuscating /home/user/payara/diagnostics/mydomain-2024-04-15T11-42-36Z/deploymentGroup1/instance1
+Successfully obfuscated /home/user/payara/diagnostics/mydomain-2024-04-15T11-42-36Z/deploymentGroup1/instance1
 Collecting logs from instance1
 Collecting jvm report from instance1
 Collecting thread dump from instance1
