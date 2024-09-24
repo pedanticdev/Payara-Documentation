@@ -26,7 +26,8 @@ The diagnostic tool can be used through the xref:Technical Documentation/Payara 
 
 Using this command will allow both customers and support staff to work faster on the investigation and analysis of production and development incidents.
 
-The obfuscate parameter will hide sensitive data in the `domain.xml` such as passwords, addresses and hostnames.
+TIP: The `--obfuscate` parameter will hide sensitive data in the `domain.xml` such as passwords, addresses and hostnames. +
+Use it if you're afraid of sensitive data being shared along with the domain configuration.
 
 NOTE: The data collected is stored in a ZIP file in your user home directory, the output directory by default.
 
