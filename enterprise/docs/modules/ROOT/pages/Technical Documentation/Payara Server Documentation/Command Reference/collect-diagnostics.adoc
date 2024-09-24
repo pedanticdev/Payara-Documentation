@@ -20,6 +20,7 @@ asadmin [asadmin-options] collect-diagnostics [--help]
 [--threadDump={false|true}]
 [--heapDump={false|true}]
 [--jvmReport={false|true}]
+[--obfuscate={true|false}]
 [domainName]
 ----
 
@@ -81,6 +82,8 @@ Whether to collect a heap dump. Defaults to `true`
 Whether to collect a thread dump. Defaults to `true`
 `--jvmReport`::
 Whether to collect the JVM report. Defaults to `true`
+`--obfuscate`::
+Whether to obfuscate data in `domain.xml`. Defaults to `true`
 
 [[operands]]
 == Operands
