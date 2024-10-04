@@ -1,0 +1,35 @@
+= Release notes - Payara Platform Enterprise 5.68.0
+
+== Supported APIs and Applications
+
+* Jakarta EE 8
+* Jakarta EE 8 Applications
+* MicroProfile 4.1
+
+
+== Improvements
+
+
+* [FISH-9063] Integrate EclipseLink's Interruption Enhancements to WriteLockManager
+
+== Security Fixes
+
+* [FISH-9553] Payload Injection Attack via Management REST interface
+
+
+== Bug Fixes
+
+* [FISH-8828] Fix Setting `javax.faces.ENABLE_WEBSOCKET_ENDPOINT` under JDK 8 leads to `java.lang.ClassNotFoundException org.glassfish.tyrus.server.TyrusServerConfiguration`
+
+== Component Upgrades
+
+
+* [FISH-9604] Bump org.apache.ant:ant from 1.10.14 to 1.10.15
+
+* [FISH-9657] Payara-Enterprise: Bump org.yaml:snakeyaml from 2.2 to 2.3
+
+* [FISH-9720] Upgrade Diagnostics Tool to 1.1
+
+* [FISH-9737] Payara-Enterprise: Bump io.projectreactor:reactor-core from 3.6.4 to 3.6.10
+
+* [FISH-9782] Payara-Enterprise: Bump commons-io:commons-io from 2.16.1 to 2.17.0
