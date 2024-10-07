@@ -1,0 +1,7 @@
+= Release Notes - Payara Platform Enterprise 4.1.2.191.51
+
+
+
+== Security Fixes
+
+* [FISH-9553] Payload Injection Attack via Management REST interface
