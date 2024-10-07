@@ -3,7 +3,7 @@
 Payara Server is certified https://projects.eclipse.org/projects/technology.microprofile/[MicroProfile 4.1] implementation.
 As proof of compatibility, output of MicroProfile TCK Test Suite tests are presented for each certified version.
 
-The following distributions of Payara 5.67.0 are certified, with results for each listed below:
+The following distributions of Payara 5.68.0 are certified, with results for each listed below:
 
-* xref:Eclipse MicroProfile Certification/5.67.0/Server TCK Results.adoc[Payara Server 5.67.0]
-* xref:Eclipse MicroProfile Certification/5.67.0/Server Web TCK Results.adoc[Payara Server 5.67.0 - Web profile]
+* xref:Eclipse MicroProfile Certification/5.68.0/Server TCK Results.adoc[Payara Server 5.68.0]
+* xref:Eclipse MicroProfile Certification/5.68.0/Server Web TCK Results.adoc[Payara Server 5.68.0 - Web profile]
