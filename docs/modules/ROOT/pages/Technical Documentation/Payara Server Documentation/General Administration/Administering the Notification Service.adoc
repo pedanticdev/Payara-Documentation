@@ -52,8 +52,8 @@ To get the current configuration of the log notifier, use the `get-log-notifier-
 ----
 asadmin> get-log-notifier-configuration
 
-Enabled  Noisy  Use Separate Log File
-true     true   false
+Enabled  Filter   Use Separate Log File
+true     WARNING  false
 Command get-log-notifier-configuration executed successfully.
 ----
 
@@ -180,8 +180,8 @@ To get the JMS notifier configuration using the Asadmin CLI, run the following c
 ----
 asadmin> get-jms-notifier-configuration
 
-Enabled  Noisy  Context Factory Class  Connection Factory Name  Queue Name  URL  Username  Password
-true     true   com.sun.enterprise.naming.SerialInitContextFactory  jms/__defaultConnectionFactory  notifierQueue  localhost:7676  myusername  mypassword
+Enabled  Filter   Context Factory Class  Connection Factory Name  Queue Name  URL  Username  Password
+true     WARNING  com.sun.enterprise.naming.SerialInitContextFactory  jms/__defaultConnectionFactory  notifierQueue  localhost:7676  myusername  mypassword
 Command get-jms-notifier-configuration executed successfully.
 ----
 
@@ -232,8 +232,8 @@ To check the current applied configuration from asadmin, run the command:
 ----
 asadmin get-eventbus-notifier-configuration
 
-Enabled  Noisy  Topic Name
-false    true   payara.notification.event
+Enabled  Filter   Topic Name
+false    WARNING  payara.notification.event
 
 Command get-eventbus-notifier-configuration executed successfully.
 ----
@@ -273,8 +273,8 @@ To check the current applied configuration from asadmin, run the command:
 ----
 asadmin get-cdieventbus-notifier-configuration
 
-Enabled  Noisy  Loopback
-false    true   false
+Enabled  Filter   Loopback
+false    WARNING  false
 Command get-cdieventbus-notifier-configuration executed successfully.
 ----
 

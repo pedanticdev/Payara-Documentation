@@ -12,7 +12,7 @@ asadmin [asadmin-options] set-slack-notifier-configuration [--help]
 [--target target]
 [--enabled={false|true}]
 [--dynamic={false|true}]
-[--noisy={false|true}]
+[--filter={INFO|WARNING|SEVERE}]
 [--token1 token]
 [--token2 token]
 [--token3 token]
@@ -48,8 +48,8 @@ Defaults to `false`. Enables or disables the log notifier
 Defaults to `false`. When set to `true`, applies the changes without a server restart.
 +
 Otherwise, a restart is required.
-`--noisy`::
-Defaults to `false`. Whether the notifier is active even if the notification event threshold is set to `FINE`.
+`--filter`::
+Defaults to `WARNING`. The notifier only responds to events at or above this level. (INFO, WARNING, SEVERE)
 `--token1`::
 The first token required to authenticate to the corresponding Slack channel.
 `--token2`::

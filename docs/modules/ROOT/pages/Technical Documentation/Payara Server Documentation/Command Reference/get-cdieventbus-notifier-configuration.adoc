@@ -43,8 +43,8 @@ Applies to a specified server instance.
 ----
 asadmin get-cdieventbus-notifier-configuration
 
-Enabled  Noisy  Loopback
-false    true   false
+Enabled  Filter   Loopback
+false    WARNING  false
 Command get-cdieventbus-notifier-configuration executed successfully.
 ----
 

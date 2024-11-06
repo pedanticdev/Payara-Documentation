@@ -43,8 +43,8 @@ Applies to a specified server instance.
 ----
 asadmin> get-log-notifier-configuration
 
-Enabled  Noisy  Use Separate Log File
-true     true   false
+Enabled  Filter   Use Separate Log File
+true     WARNING  false
 Command get-log-notifier-configuration executed successfully.
 ----
 

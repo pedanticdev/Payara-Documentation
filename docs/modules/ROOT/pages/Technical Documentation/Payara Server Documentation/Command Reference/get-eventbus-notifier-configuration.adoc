@@ -43,8 +43,8 @@ Applies to a specified server instance.
 ----
 asadmin get-eventbus-notifier-configuration
 
-Enabled  Noisy  Topic Name
-false    true   payara.notification.event
+Enabled  Filter   Topic Name
+false    WARNING  payara.notification.event
 
 Command get-eventbus-notifier-configuration executed successfully.
 ----

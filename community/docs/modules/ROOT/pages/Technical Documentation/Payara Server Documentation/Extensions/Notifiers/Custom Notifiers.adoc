@@ -191,7 +191,7 @@ By default, a notifier implementation has 3 basic configuration parameters
 
 `enabled`:: Is the Notifier active?
 `dynamic`:: Whether to apply the changes immediately (true) or after server restart.
-`noisy`:: When set, the notifier includes verbose information in the output.
+`filter`:: The notifier only responds to events at or above this level. (INFO, WARNING, SEVERE)
 
 Additional configuration options can be provided by defining properties using the `org.jvnet.hk2.config.Attribute` annotation like this:
 
@@ -222,7 +222,7 @@ public interface CustomNotifierConfiguration extends PayaraNotifierConfiguration
 From the above code the following components are used:
 
 * `@Configured`: Defines the interface as part of the configuration, and a suitable proxy holding the actual configuration values will be created at runtime.
-* `PayaraNotifierConfiguration`: Holds the common attributes like _enabled_ and _noisy_, and is required for storing it in the `domain.xml` configuration file.
+* `PayaraNotifierConfiguration`: Holds the common attributes like _enabled_ and _filter_, and is required for storing it in the `domain.xml` configuration file.
 * `@Attribute`: Defines an additional configuration property. You can specify the type of the value (`dataType`), if the value is required (`required`), and a default value if the user doesn't specify it explicitly (`defaultValue`).
 
 [[asadmin-commands]]

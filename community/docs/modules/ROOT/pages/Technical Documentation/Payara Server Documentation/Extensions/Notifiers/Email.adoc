@@ -64,6 +64,6 @@ Here is an example output:
 ----
 $ asadmin get-email-notifier-configuration
 
-Enabled  JNDI Name                  Recipient
-true     mail/exampleEmailNotifier  example@example.com
+Enabled  Filter   JNDI Name                  Recipient
+true     WARNING  mail/exampleEmailNotifier  example@example.com
 ----

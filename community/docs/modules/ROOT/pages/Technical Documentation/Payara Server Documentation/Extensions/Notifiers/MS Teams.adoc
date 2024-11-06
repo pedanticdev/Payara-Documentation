@@ -42,6 +42,6 @@ This will return the details of the current Teams configuration; see below for a
 
 [source, shell]
 ----
-Enabled  Noisy  Webhook URL
-true     false  https://outlook.office.com/webhook/xyz
+Enabled  Filter   Webhook URL
+true     WARNING  https://outlook.office.com/webhook/xyz
 ----

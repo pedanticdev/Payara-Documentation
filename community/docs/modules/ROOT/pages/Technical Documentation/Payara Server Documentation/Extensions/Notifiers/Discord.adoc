@@ -42,6 +42,6 @@ This will return the details of the current Discord configuration; see below for
 
 [source, shell]
 ----
-Enabled  Noisy  Webhook ID  Webhook Token
-true     false  xxx         yyy
+Enabled  Filter   Webhook ID  Webhook Token
+true     WARNING  xxx         yyy
 ----

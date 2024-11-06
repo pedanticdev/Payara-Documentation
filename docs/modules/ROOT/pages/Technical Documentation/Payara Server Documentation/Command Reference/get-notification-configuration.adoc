@@ -44,19 +44,19 @@ Applies to a specified server instance.
 ----
 asadmin get-notification-configuration
 
-Notifier Name         Enabled  Notifier Enabled  Notifier Noisy
-slack-notifier        true     false             true
-snmp-notifier         true     false             true
-teams-notifier        true     false             true
-datadog-notifier      true     false             true
-jms-notifier          true     false             true
-newrelic-notifier     true     false             true
-log-notifier          true     true              true
-cdieventbus-notifier  true     false             true
-eventbus-notifier     true     false             true
-xmpp-notifier         true     false             true
-email-notifier        true     false             true
-discord-notifier      true     false             true
+Notifier Name         Enabled  Notifier Enabled  Filter Level
+slack-notifier        true     false             WARNING
+snmp-notifier         true     false             WARNING
+teams-notifier        true     false             WARNING
+datadog-notifier      true     false             WARNING
+jms-notifier          true     false             WARNING
+newrelic-notifier     true     false             WARNING
+log-notifier          true     true              WARNING
+cdieventbus-notifier  true     false             WARNING
+eventbus-notifier     true     false             WARNING
+xmpp-notifier         true     false             WARNING
+email-notifier        true     false             WARNING
+discord-notifier      true     false             WARNING
 
 Command get-notification-configuration executed successfully.
 

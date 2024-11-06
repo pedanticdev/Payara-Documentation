@@ -43,8 +43,8 @@ Applies to on a specified server instance.
 ----
 asadmin get-jms-notifier-configuration
 
-Enabled  Noisy  Context Factory Class  Connection Factory Name  Queue Name  URL  Username  Password
-true     true   com.sun.enterprise.naming.SerialInitContextFactory  jms/__defaultConnectionFactory  notifierQueue  localhost:7676  myusername  mypassword
+Enabled  Filter   Context Factory Class  Connection Factory Name  Queue Name  URL  Username  Password
+true     WARNING  com.sun.enterprise.naming.SerialInitContextFactory  jms/__defaultConnectionFactory  notifierQueue  localhost:7676  myusername  mypassword
 Command get-jms-notifier-configuration executed successfully.
 ----
 

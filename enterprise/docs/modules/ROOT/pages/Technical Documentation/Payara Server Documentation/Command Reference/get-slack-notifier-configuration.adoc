@@ -46,8 +46,8 @@ Applies to on a specified server instance.
 ----
 asadmin get-slack-notifier-configuration
 
-Enabled  Noisy  Token 1    Token 2    Token 3
-true     false  T43CHENUC  B441EFQB1  Jas8P3jCZ4wK8Y2m88dCxGkn
+Enabled  Filter   Token 1    Token 2    Token 3
+true     WARNING  T43CHENUC  B441EFQB1  Jas8P3jCZ4wK8Y2m88dCxGkn
 ----
 
 [[exit-status]]

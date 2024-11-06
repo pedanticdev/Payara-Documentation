@@ -46,8 +46,8 @@ Applies to on a specified server instance.
 ----
 asadmin get-datadog-notifier-configuration
 
-Enabled  Noisy  Key
-true     false  af510f122026bc9107f7c5f4f049e597
+Enabled  Filter   Key
+true     WARNING  af510f122026bc9107f7c5f4f049e597
 ----
 
 [[exit-status]]
