@@ -280,3 +280,56 @@ public class HelloWorldResource {
 This sample demonstrates a simple REST endpoint named `hello` that accepts a query parameter `name` and responds with a greeting message.
 
 Feel free to adjust archetype parameters to tailor the generated application to your project requirements.
+
+[[new-feature-er-diagram-integration]] 
+== ER Diagram Designer with Generative AI Support
+
+Payara Starter enables developers to streamline the creation of full-stack applications by leveraging Entity-Relationship (ER) diagrams. Generative AI enhances this process by automating the generation and customization of diagrams based on inputs and requirements. Developers can visualize, interact, and modify these diagrams in real time, making Payara Starter a more powerful tool for application design and development.
+
+image::payara-starter/er-diagram.png[ER Diagram]
+
+[[features-of-er-diagram-integration]] 
+=== Features of ER Diagram Designer
+
+==== Pre-loaded Diagrams: 
+The Payara Starter includes default ER diagrams, stored in Mermaid format, which users can modify as a starting point for their own designs.
+
+image::payara-starter/existing-er-diagram.png[Existing ER Diagram]
+
+==== Automated ER Diagram Generation: 
+Payara Starter automates ER diagram generation by leveraging Generative AI based on user-provided descriptions. Users can create accurate and well-structured diagrams with minimal manual configuration.
+
+==== Real-Time Chat Support:
+Through an integrated live chat, users can interact with Generative AI to refine and expand existing diagrams based on their specific requirements.
+
+==== Interactive Auto-Pilot Mode: 
+An innovative auto-pilot mode allows users to dynamically expand or shrink the number of entities in the ER diagram using (+/-) buttons, providing a quick way to modify complexity without detailed configuration.
+
+==== Live Diagram Panel: 
+The Payara Starter interface includes a split panel where the Mermaid source code appears on the left, and a live visual representation of the ER diagram is shown on the right. Any changes made in the source or through Generative AI interactions update the visualization immediately.
+
+==== Full-Stack Application Generation: 
+Once finalized, Payara Starter uses the ER diagram to automatically generate corresponding JPA entities and REST endpoints, making it easy to move from design to implementation.
+
+[[using-the-er-diagram-feature]]
+=== Using the ER Diagram
+
+==== Open the existing or Generate a new ER Diagram:
+Open the ER Diagram panel within the Payara Starter application interface.
+Select from pre-loaded diagrams or start a new diagram by pressing the **Diagram Builder & Live Preview** button and entering a description.
+
+image::payara-starter/create-er-diagram.png[Create ER Diagram]
+
+==== Enhance the Diagrams:
+Use the live chat support to interact with OpenAI. Type specific requests, such as "Add an Order entity" or "Make Customer and Order related," and receive real-time updates to your diagram.
+In auto-pilot mode, use the (+/-) buttons to quickly enlarge or shrink the diagram.
+
+image::payara-starter/update-er-diagram.png[Update ER Diagram]
+
+
+==== Generate Full-Stack Application:
+Once the ER diagram meets your requirements, initiate the full-stack application generation. Payara Starter uses the diagram structure to create corresponding backend entities, repository services and rest endpoints.
+
+image::payara-starter/generate-application.png[Generate Application]
+
+The integration of OpenAI with diagram generation in Payara Starter empowers developers to design, adjust, and visualize application architectures effortlessly, fostering rapid iteration and streamlined development. This feature represents a significant leap forward in developer productivity and application design capability.
