@@ -318,18 +318,19 @@ Once finalized, Payara Starter uses the ER diagram to automatically generate cor
 Open the ER Diagram panel within the Payara Starter application interface.
 Select from pre-loaded diagrams or start a new diagram by pressing the **Diagram Builder & Live Preview** button and entering a description.
 
-image::payara-starter/create-er-diagram.png[Create ER Diagram, width=50%]
+image::payara-starter/create-er-diagram.png[Create ER Diagram]
 
 ==== Enhance the Diagrams:
 Use the live chat support to interact with OpenAI. Type specific requests, such as "Add an Order entity" or "Make Customer and Order related," and receive real-time updates to your diagram.
 In auto-pilot mode, use the (+/-) buttons to quickly enlarge or shrink the diagram.
 
-image::payara-starter/update-er-diagram.png[Update ER Diagram, width=50%]
+image::payara-starter/update-er-diagram.png[Update ER Diagram]
 
 
 ==== Generate Full-Stack Application:
 Once the ER diagram meets your requirements, initiate the full-stack application generation. Payara Starter uses the diagram structure to create corresponding backend entities, repository services and rest endpoints.
 
 image::payara-starter/generate-application.png[Generate Application, width=50%]
+image::payara-starter/final-application.png[Final Application, width=50%]
 
 The integration of OpenAI with diagram generation in Payara Starter empowers developers to design, adjust, and visualize application architectures effortlessly, fostering rapid iteration and streamlined development. This feature represents a significant leap forward in developer productivity and application design capability.
