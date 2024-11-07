@@ -8,7 +8,7 @@ asciidoc:
   attributes:
     glassfishVersion: '5'
     payaraWebDtd: 'https://raw.githubusercontent.com/payara/Payara-Documentation/main-6/docs/modules/ROOT/pages/Appendix/Schemas/payara-web-app_4.dtd'
-    payaraResourcesDtd: 'https://raw.githubusercontent.com/payara/Payara-Documentation/main-6/docs/modules/ROOT/pages/Appendix/Schemas/payara-resources_1_7.dtd'
+    payaraResourcesDtd: 'https://raw.githubusercontent.com/payara/Payara-Documentation/main-6/docs/modules/ROOT/pages/Appendix/Schemas/payara-resources_1_8.dtd'
     # URL root for references to the docs for Payara Enterprise (mostly for enterprise-only features).
     # Use with the link: prefix, like link:{enterpriseDocsPageRootUrl}/readme.html, otherwise rendering outside Antora will be broken
     enterpriseDocsPageRootUrl: https://docs.payara.fish/enterprise/docs/

@@ -4805,20 +4805,20 @@ The following table describes attributes for the `mail-resource` element.
 
 |`store-protocol` |`imap` |(optional) Specifies the storage protocol service, which connects to a mail server, retrieves messages, and saves messages in folder(s). Allowed values are `imap`, `pop3`, `imaps`, and `pop3s` .
 
-|`store-protocol-` `class` |`com.sun.mail.imap.IMAPStore` a| (optional) Specifies the service provider implementation class for storage. Allowed values are:
+|`store-protocol-` `class` |`org.eclipse.angus.mail.imap.IMAPStore` a| (optional) Specifies the service provider implementation class for storage. Allowed values are:
 
-* `com.sun.mail.imap.IMAPStore`
-* `com.sun.mail.pop3.POP3Store`
-* `com.sun.mail.imap.IMAPSSLStore`
-* `com.sun.mail.pop3.POP3SSLStore`
+* `org.eclipse.angus.mail.imap.IMAPStore`
+* `org.eclipse.angus.mail.pop3.POP3Store`
+* `org.eclipse.angus.mail.imap.IMAPSSLStore`
+* `org.eclipse.angus.mail.pop3.POP3SSLStore`
 
 |`transport-protocol` |`smtp` |(optional) Specifies the transport protocol service, which sends messages. Allowed values are `smtp` and `smtps`.
 
-|`transport-protocol-class` |`com.sun.mail.smtp.SMTPTransport` a| (optional) Specifies the service provider implementation class for transport. Allowed values are:
+|`transport-protocol-class` |`org.eclipse.angus.mail.smtp.SMTPTransport` a| (optional) Specifies the service provider implementation class for transport. Allowed values are:
 
-`com.sun.mail.smtp.SMTPTransport`
+`org.eclipse.angus.mail.smtp.SMTPTransport`
 
-`com.sun.mail.smtp.SMTPSSLTransport`
+`org.eclipse.angus.mail.smtp.SMTPSSLTransport`
 
 |`host` |none |The mail server host name.
 
