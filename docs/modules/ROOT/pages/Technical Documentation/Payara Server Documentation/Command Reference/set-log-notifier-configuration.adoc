@@ -51,7 +51,7 @@ Defaults to `false`. Whether to use a separate log file to store notifications.
 [[examples]]
 == Examples
 
-*Example 1 Enable the Log Notifier and Configure Filter mode*
+*Example 1 Enable the Log Notifier and Configure Filter level*
 
 [source, shell]
 ----

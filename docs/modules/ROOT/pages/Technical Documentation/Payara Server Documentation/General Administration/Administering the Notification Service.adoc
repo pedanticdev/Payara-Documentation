@@ -19,6 +19,13 @@ The following Asadmin CLI subcommands can be used to configure the notification 
 
 The Notification service provides the ability to disseminate notification events through various channels or **notifiers**, which relay them to different destinations.
 
+[[filtering]]
+=== Filtering
+All notifiers make use of a filtering system to ignore or accept notification events. Events are emitted with a severity level of `INFO`, `WARNING`, or `SEVERE`;
+notifiers may be individually configured to filter out events which are below a certain severity level.
+
+A notifier with a filter level of `WARNING` (the default) will disregard events at the `INFO` level, and accept event at the `WARNING` and `SEVERE` levels.
+
 The following is a list of the default set of notifiers available in Payara Server.
 
 [[log-notifier]]
