@@ -188,8 +188,8 @@ Also, you can retrieve the current configuration for the New Relic notifier usin
 ----
 asadmin > get-newrelic-notifier-configuration
 
-Enabled  Noisy  Key                               Account Id
-true     true   b5815wdxj6lF_tmMBljQa5y1603JTiLh  1658989
+Enabled  Filter   Key                               Account Id
+true     WARNING  b5815wdxj6lF_tmMBljQa5y1603JTiLh  1658989
 ----
 
 [[on-the-domain.xml-configuration-file]]

@@ -205,9 +205,9 @@ By default, each Notifier has 3 configuration parameters
 * enabled
 +
 Is the Notifier active?
-* noisy
+* filter
 +
-When set, the notifier includes verbose information in the output.
+The notifier will ignore events below this severity level.
 * dynamic
 +
 Whether to apply the changes immediately (true) or after server restart.

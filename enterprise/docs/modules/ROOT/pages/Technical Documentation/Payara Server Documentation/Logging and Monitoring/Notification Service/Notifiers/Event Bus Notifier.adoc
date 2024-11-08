@@ -43,7 +43,7 @@ This will return the current configuration, with whether it is currently enabled
 [source, shell]
 ----
 $ asadmin get-eventbus-notifier-configuration
-Enabled  Noisy  Topic Name
-false    true   payara.notification.event
+Enabled  Filter   Topic Name
+false    WARNING  payara.notification.event
 ----
 
