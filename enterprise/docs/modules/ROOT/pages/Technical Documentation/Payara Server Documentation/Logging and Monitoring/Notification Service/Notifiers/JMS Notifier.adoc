@@ -133,8 +133,8 @@ asadmin> get-jms-notifier-configuration
 It will return the details of the current JMS notifier configuration, like in the following example:
 
 ----
-Enabled  Noisy  Context Factory Class                               Connection Factory Name         Queue Name     URL             Username    Password
-true     true   com.sun.enterprise.naming.SerialInitContextFactory  jms/__defaultConnectionFactory  notifierQueue  localhost:7676  myusername  mypassword
+Enabled  Filter   Context Factory Class                               Connection Factory Name         Queue Name     URL             Username    Password
+true     WARNING  com.sun.enterprise.naming.SerialInitContextFactory  jms/__defaultConnectionFactory  notifierQueue  localhost:7676  myusername  mypassword
 ----
 
 [[troubleshooting]]

@@ -37,8 +37,8 @@ This will return the current configuration, with whether it is currently enabled
 [source, shell]
 ----
 $ asadmin get-cdieventbus-notifier-configuration
-Enabled  Noisy  Loopback
-false    true   false    
+Enabled  Filter   Loopback
+false    WARNING  false
 ----
 
 [[observing-events]]

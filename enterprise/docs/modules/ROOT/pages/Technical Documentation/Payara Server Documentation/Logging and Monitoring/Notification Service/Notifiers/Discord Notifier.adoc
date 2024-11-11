@@ -50,6 +50,6 @@ below for an example:
 
 [source, shell]
 ----
-Enabled  Noisy  Webhook ID  Webhook Token
-true     false  xxx         yyy
+Enabled  Filter   Webhook ID  Webhook Token
+true     WARNING  xxx         yyy
 ----

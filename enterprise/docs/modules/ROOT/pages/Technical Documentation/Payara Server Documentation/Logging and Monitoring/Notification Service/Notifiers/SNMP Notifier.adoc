@@ -107,8 +107,8 @@ This will return the details of the current SNMP configuration; see below for an
 
 [source, shell]
 ----
-Enabled  Noisy  Community  OID                Version  Host       SNMP Port
-true     false  example    .1.3.6.1.2.1.1.8   v2c      127.0.0.1  162
+Enabled  Filter   Community  OID                Version  Host       SNMP Port
+true     WARNING  example    .1.3.6.1.2.1.1.8   v2c      127.0.0.1  162
 ----
 
 [[on-the-domain.xml-configuration-file]]

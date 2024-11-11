@@ -6,7 +6,16 @@ Payara Server comes with a general Notification service that can be used to log 
 [[notifiers]]
 == Notifiers
 
-The Notification service provides the ability to disseminate notification events through various channels or **notifiers**, which relay them to different destinations. The following is a list of the default set of notifiers available in Payara Server.
+The Notification service provides the ability to disseminate notification events through various channels or **notifiers**, which relay them to different destinations.
+
+[[filtering]]
+=== Filtering
+
+All notifiers make use of a filtering system to accept or ignore notification events. Events are emitted with a severity level of `INFO`, `WARNING`, or `SEVERE`. Notifiers may be individually configured to filter out events which are below a certain severity level.
+
+NOTE: A notifier with a filter level of `WARNING` (the default) will disregard events at the `INFO` level, and accept event at the `WARNING` and `SEVERE` levels.
+
+The following is a list of the default set of notifiers available in Payara Server.
 
 [[log-notifier]]
 === Log Notifier
@@ -37,8 +46,8 @@ To get the current configuration of the log notifier, use the `get-log-notifier-
 ----
 asadmin> get-log-notifier-configuration
 
-Enabled  Noisy  Use Separate Log File
-true     true   false
+Enabled  Filter   Use Separate Log File
+true     WARNING  false
 Command get-log-notifier-configuration executed successfully.
 ----
 
@@ -163,8 +172,8 @@ To get the JMS notifier configuration using the Asadmin CLI, run the following c
 ----
 asadmin> get-jms-notifier-configuration
 
-Enabled  Noisy  Context Factory Class  Connection Factory Name  Queue Name  URL  Username  Password
-true     true   com.sun.enterprise.naming.SerialInitContextFactory  jms/__defaultConnectionFactory  notifierQueue  localhost:7676  myusername  mypassword
+Enabled  Filter   Context Factory Class  Connection Factory Name  Queue Name  URL  Username  Password
+true     WARNING  com.sun.enterprise.naming.SerialInitContextFactory  jms/__defaultConnectionFactory  notifierQueue  localhost:7676  myusername  mypassword
 Command get-jms-notifier-configuration executed successfully.
 ----
 
@@ -203,8 +212,8 @@ To check the current applied configuration from asadmin, run the command:
 ----
 asadmin> get-eventbus-notifier-configuration
 
-Enabled  Noisy  Topic Name
-false    true   payara.notification.event
+Enabled  Filter   Topic Name
+false    WARNING  payara.notification.event
 
 Command get-eventbus-notifier-configuration executed successfully.
 ----
@@ -240,8 +249,8 @@ To check the current applied configuration from asadmin, run the command:
 ----
 asadmin> get-cdieventbus-notifier-configuration
 
-Enabled  Noisy  Loopback
-false    true   false
+Enabled  Filter   Loopback
+false    WARNING  false
 Command get-cdieventbus-notifier-configuration executed successfully.
 ----
 
