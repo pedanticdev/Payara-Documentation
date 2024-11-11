@@ -15,7 +15,7 @@ asadmin [asadmin-options] set-notification-configuration
 [--dynamic={false|true}]
 [--notifierEnabled={false|true}]
 [--notifierDynamic={false|true}]
-[--noisy={false|true}]
+[--filter={INFO|WARNING|SEVERE}]
 [--useseparatelogfile={false|true}]
 ----
 
@@ -52,8 +52,8 @@ Defaults to `false`. Enables or disables the log notifier
 Defaults to `false`. When set to `true`, applies the changes to the log notifier without a server restart.
 +
 Otherwise, a restart is required.
-`--noisy`::
-Defaults to `false`. Whether the log notifier is active even if a notification event threshold is set to `FINE`.
+`--filter`::
+Defaults to `WARNING`. The notifier only responds to events at or above this level. (INFO, WARNING, SEVERE)
 `--useseparatelogfile`::
 Defaults to `false`. Whether to use a separate log file to store notifications.
 

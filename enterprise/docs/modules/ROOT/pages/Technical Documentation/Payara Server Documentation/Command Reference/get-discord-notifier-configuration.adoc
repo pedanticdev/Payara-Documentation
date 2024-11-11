@@ -46,8 +46,8 @@ Applies to on a specified server instance.
 ----
 asadmin get-discord-notifier-configuration
 
-Enabled  Noisy  Webhook ID  Webhook Token
-true     false  xxx         yyy
+Enabled  Filter   Webhook ID  Webhook Token
+true     WARNING  xxx         yyy
 ----
 
 [[exit-status]]

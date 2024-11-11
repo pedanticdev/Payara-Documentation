@@ -46,8 +46,8 @@ Applies to on a specified server instance.
 ----
 asadmin get-xmpp-notifier-configuration
 
-Enabled  Noisy  Host          XMPP Port  Service Name            Username         Password  Security Disabled  Room ID
-true     false  172.28.128.3  5222       conference.payara.fish  payara_notifier  payara    true               server
+Enabled  Filter   Host          XMPP Port  Service Name            Username         Password  Security Disabled  Room ID
+true     WARNING  172.28.128.3  5222       conference.payara.fish  payara_notifier  payara    true               server
 ----
 
 [[exit-status]]

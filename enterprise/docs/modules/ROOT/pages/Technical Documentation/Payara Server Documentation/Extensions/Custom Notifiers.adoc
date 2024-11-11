@@ -209,9 +209,9 @@ By default, each Notifier has 3 configuration parameters
 * `enabled`
 +
 Is the Notifier active?
-* `noisy`
+* `filter`
 +
-When set, the notifier includes verbose information in the output.
+The notifier will ignore events below this severity level.
 * `dynamic`
 +
 Whether to apply the changes immediately (true) or after server restart.
@@ -250,7 +250,7 @@ The highlights of the above code are
 Defines the interface as part of the configuration, and a suitable proxy holding the actual configuration values will be created at runtime.
 * `PayaraNotifierConfiguration`
 +
-Holds the common attributes like _enabled_ and _noisy_, and is required for storing it in the Payara Configuration file.
+Holds the common attributes like _enabled_ and _filter_, and is required for storing it in the Payara Configuration file.
 * `@Attribute`
 +
 Defines an additional configuration property. You can specify the type of the value (`dataType`), if the value is required (`required`), and a default value if the user doesn't specify it explicitly (`defaultValue`).

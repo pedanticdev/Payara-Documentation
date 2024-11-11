@@ -230,8 +230,8 @@ This will return the details of the current SNMP configuration; see below for an
 
 [source, shell]
 ----
-Enabled  Noisy  Community  OID                Version  Host       SNMP Port
-true     false  example    .1.3.6.1.2.1.1.8   v2c      127.0.0.1  162
+Enabled  Filter   Community  OID                Version  Host       SNMP Port
+true     WARNING  example    .1.3.6.1.2.1.1.8   v2c      127.0.0.1  162
 ----
 
 [[snmp-troubleshooting]]
@@ -420,8 +420,8 @@ Also, you can retrieve the current configuration for the XMPP notifier using the
 ----
 asadmin get-xmpp-notifier-configuration
 
-Enabled  Noisy  Host          XMPP Port  Service Name            Username         Password  Security Disabled  Room ID
-true     false  172.28.128.3  5222       conference.payara.fish  payara_notifier  payara    true               server
+Enabled  Filter   Host          XMPP Port  Service Name            Username         Password  Security Disabled  Room ID
+true     WARNING  172.28.128.3  5222       conference.payara.fish  payara_notifier  payara    true               server
 ----
 
 [[xmpp-troubleshooting]]
@@ -643,8 +643,8 @@ Also, you can retrieve the current configuration for the New Relic notifier usin
 ----
 asadmin get-newrelic-notifier-configuration
 
-Enabled  Noisy  Key                               Account Id
-true     true   b5815wdxj6lF_tmMBljQa5y1603JTiLh  1658989
+Enabled  Filter  Key                               Account Id
+true     WARNING   b5815wdxj6lF_tmMBljQa5y1603JTiLh  1658989
 ----
 
 [[newrelic-troubleshooting]]
@@ -748,8 +748,8 @@ Also, you can retrieve the current configuration for the Datadog notifier using 
 ----
 asadmin get-datadog-notifier-configuration
 
-Enabled  Noisy  Key
-true     false  af510f122026bc9107f7c5f4f049e597
+Enabled  Filter   Key
+true     WARNING  af510f122026bc9107f7c5f4f049e597
 ----
 
 [[datadog-troubleshooting]]
@@ -812,8 +812,8 @@ This will return the details of the current Teams configuration; see below for a
 
 [source, shell]
 ----
-Enabled  Noisy  Webhook URL
-true     false  https://outlook.office.com/webhook/xyz
+Enabled  Filter   Webhook URL
+true     WARNING  https://outlook.office.com/webhook/xyz
 ----
 
 [[slack-notifier]]
@@ -908,8 +908,8 @@ Also, you can retrieve the current configuration for the Slack notifier using th
 ----
 asadmin get-slack-notifier-configuration
 
-Enabled  Noisy  Token 1    Token 2    Token 3
-true     false  T43CHENUC  B441EFQB1  Jas8P3jCZ4wK8Y2m88dCxGkn
+Enabled  Filter   Token 1    Token 2    Token 3
+true     WARNING  T43CHENUC  B441EFQB1  Jas8P3jCZ4wK8Y2m88dCxGkn
 ----
 
 [[slack-troubleshooting]]
@@ -974,6 +974,6 @@ This will return the details of the current Discord configuration; see below for
 
 [source, shell]
 ----
-Enabled  Noisy  Webhook ID  Webhook Token
-true     false  xxx         yyy
+Enabled  Filter   Webhook ID  Webhook Token
+true     WARNING  xxx         yyy
 ----
