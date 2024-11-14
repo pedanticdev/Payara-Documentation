@@ -1247,3 +1247,126 @@ A string value that specifies whether the `Secure` attribute is included in `JSE
 * `true` — The `Secure` attribute is included.
 * `false` — The `Secure` attribute is not included.
 * `dynamic` — The `Secure` attribute setting is inherited from the default ports table for all HTTP listeners first session participating in SSO. This is the default value.
+
+[[http-header-validation]]
+=== HTTP Header Validation
+
+The following options can help you to protect against invalid characters on the Http Header Name and Http Header Value content. You can follow the RFC-9110 documentation (See section 5.5 of: https://www.rfc-editor.org/rfc/rfc9110.html)  to understand more about the recommendations.
+
+IMPORTANT: Currently there is a reported CVE with number  https://www.cve.org/CVERecord?id=CVE-2024-45687[CVE-2024-45687] that indicates a risk when not protecting against invalid characters on the Header Name and Header Value content.
+
+The following options can be set on the Payara Server with the asadmin command as follows:
+
+*Invalid Characters*
+
+The following table summarize the list of invalid characters that can't be added on the Header Name and Header Value content from the RFC-9110 definition:
+
+
+.Invalid Characters RFC-9110
+|===
+|Character |Representation
+
+|NUL character
+|This character is expressed in the following forms on a literal value: \0  \x00 https://en.wikipedia.org/wiki/Null_character[review explanation here]
+
+|LF Character (new line)
+|This character is expressed in the following forms on a literal value: \n \x0A https://en.wikipedia.org/wiki/Newline[review explanation here]
+
+|CR Character (carriage return)
+|This character is expressed in the following forms on a literal value: \r \x0D https://en.wikipedia.org/wiki/Carriage_return[review explanation here]
+
+|===
+
+
+*Header Name validation*
+
+To protect against invalid characters on the Http Header Name you need to enable the following property:
+
+
+.Http Header Name Validation
+|===
+|Property |Description
+
+|org.glassfish.grizzly.http.STRICT_HEADER_NAME_VALIDATION_RFC_9110
+|This property enable the validation of the Header Name content to prevent any usage of invalid characters on it. By default, this property is set as false on the grizzly implementation. You need to set as true to enable Http Header Name content validation
+
+|===
+
+To set the property you can use the following command:
+
+[source,shell]
+----
+asadmin create-jvm-options --target=server-config "-Dorg.glassfish.grizzly.http.STRICT_HEADER_NAME_VALIDATION_RFC_9110\=true"
+----
+
+To test it you can make a call with curl adding an invalid Http Header Name using invalid characters:
+
+[source,shell]
+----
+curl -i -v -H "X-MyHeader\n: hello" myendpoint
+----
+
+The result of this call with the enabled property will be as follows:
+
+[source,shell]
+----
+< HTTP/1.1 400 Bad Request
+HTTP/1.1 400 Bad Request
+< Date: Wed, 13 Nov 2024 20:36:37 GMT
+Date: Wed, 13 Nov 2024 20:36:37 GMT
+< Connection: close
+Connection: close
+< Content-Length: 0
+Content-Length: 0
+< X-Frame-Options: SAMEORIGIN
+X-Frame-Options: SAMEORIGIN
+
+<
+* Closing connection 0
+----
+
+*Header Value validation*
+
+To protect against invalid characters on the Http Header Value you need to enable the following property:
+
+.Http Header Value Validation
+|===
+|Property |Description
+
+|org.glassfish.grizzly.http.STRICT_HEADER_VALUE_VALIDATION_RFC_9110
+|This property enable the validation of the Header Value content to prevent any usage of invalid characters on it. By default, this property is set as false on the grizzly implementation. You need to set as true to enable Http Header Value content validation
+
+|===
+
+To set the property you can use the following command:
+
+[source,shell]
+----
+asadmin create-jvm-options --target=server-config "-Dorg.glassfish.grizzly.http.STRICT_HEADER_VALUE_VALIDATION_RFC_9110\=true"
+----
+
+To test it you can make a call with curl adding an invalid Http Header Value using invalid characters:
+
+[source,shell]
+----
+curl -i -v -H "X-MyHeader: hello\n" myendpoint
+----
+
+The result of this call with the enabled property will be as follows:
+
+[source,shell]
+----
+< HTTP/1.1 400 Bad Request
+HTTP/1.1 400 Bad Request
+< Date: Wed, 13 Nov 2024 20:37:04 GMT
+Date: Wed, 13 Nov 2024 20:37:04 GMT
+< Connection: close
+Connection: close
+< Content-Length: 0
+Content-Length: 0
+< X-Frame-Options: SAMEORIGIN
+X-Frame-Options: SAMEORIGIN
+
+<
+* Closing connection 0
+----
