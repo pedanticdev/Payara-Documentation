@@ -61,10 +61,3 @@
 * [https://github.com/payara/Payara/pull/7045[FISH-10087]] Upgrade Docker JDK to 17.0.13
 
 * [https://github.com/payara/Payara/pull/7045[FISH-10088]] Upgrade Docker JDK to 11.0.25
-
-
-
-
-
-
-
