@@ -1,0 +1,55 @@
+= Release notes - Payara Platform Enterprise 5.69.0
+
+== Supported APIs and Applications
+
+* Jakarta EE 8
+* Jakarta EE 8 Applications
+* MicroProfile 4.1
+
+
+== Improvements
+
+* [FISH-8855] Auto Name Deployment Group
+
+* [FISH-9198] Support for TOML MicroProfile Config Sources
+
+
+== Bug Fixes
+
+* [FISH-7351] change-admin-password fails in boot command files
+
+* [FISH-8103] asadmin undeploy command is not working as expected
+
+* [FISH-8286] Backporting bugfix - Date class cannot be serialized in JDK 8
+
+* [FISH-9748] [Community Contribution - https://github.com/lprimak[lprimak]] Fix High Availability Session Race Condition
+
+== Component Upgrades
+
+* [FISH-7165] Upgrade JXMPP in XMPP Notifier to 1.0.3
+
+* [FISH-7166] Upgrade Smack XMPP Notifier to 4.4.8
+
+* [FISH-7167] Upgrade MiniDNS in XMPP Notifier to 1.0.5
+
+* [FISH-8510] Upgrade EclipseLink to 2.7.15
+
+* [FISH-9205] Upgrade Jersey to 2.45
+
+* [FISH-9954] Payara-Enterprise: Bump net.java.dev.jna:jna from 5.14.0 to 5.15.0
+
+* [FISH-9955] Bump com.fasterxml.jackson:jackson-bom from 2.17.2 to 2.18.0
+
+* [FISH-9980] Payara-Enterprise: Bump asm.version from 9.7 to 9.7.1
+
+* [FISH-10071] Payara-Enterprise: Bump com.fasterxml.jackson:jackson-bom from 2.18.0 to 2.18.1
+
+* [FISH-10086] Upgrade Docker JDK to 21.0.5
+
+* [FISH-10087] Upgrade Docker JDK to 17.0.13
+
+* [FISH-10088] Upgrade Docker JDK to 11.0.25
+
+* [FISH-10089] Upgrade Docker JDK to 8u432
+
+* [FISH-10124] Upgrade SNMP4J to 2.8.18
