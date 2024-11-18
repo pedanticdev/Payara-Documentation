@@ -40,3 +40,41 @@ To configure the TOML Config Source from the command line, use these commands:
 == Usage
 
 Provided that all of the above sections are configured correctly, the properties can be injected into any applicable MicroProfile Config injection point as with any other Config Source. They can also be fetched using the asadmin utility.
+
+To prevent StackOverFlow Exceptions, the depth parameter limits the recursion depth when reading properties from the TOML file. If the maximum recursion depth is reached, properties will not be read.
+
+[[toml-example]]
+==== Example - TOML
+
+[source, toml]
+----
+title = "TOML Example"
+
+[owner]
+name = "Tom Preston-Werner"
+dob = 1979-05-27T07:32:00-08:00
+
+[database]
+enabled = true
+ports = [ 8000, 8001, 8002 ]
+----
+
+[[config-provider-example]]
+==== Example - Config Provider
+
+[source, java]
+----
+Config config = ConfigProvider.getConfig();
+
+String ownerName = config.getValue("owner.name", String.class);
+----
+
+[[inject-example]]
+==== Example - Dependency Injection
+
+[source, java]
+----
+@Inject
+@ConfigProperty(name="database.ports[0]")
+private Optional<Integer> databasePort;
+----
