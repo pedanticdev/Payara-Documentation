@@ -4,7 +4,7 @@
 As required by the https://www.eclipse.org/legal/tck.php[Eclipse Foundation Technology Compatibility Kit License], following is a summary of the TCK results for Payara Server releases for Jakarta EE Core Profile 10.
 
 [[payara-server-web-results]]
-== Payara Server 6.2024.10 (Web Profile) Jakarta EE 10 Core Profile Certification Summary
+== Payara Server 6.2024.11 (Web Profile) Jakarta EE 10 Core Profile Certification Summary
 
 - Product Name, Version and download URL (if applicable):
 +
@@ -14,7 +14,7 @@ As required by the https://www.eclipse.org/legal/tck.php[Eclipse Foundation Tech
 |
 {empty} +
 {empty} +
-https://www.payara.fish/downloads/payara-platform-community-edition[Payara Server 6.2024.10 (Web Profile)]
+https://www.payara.fish/downloads/payara-platform-community-edition[Payara Server 6.2024.11 (Web Profile)]
 |===
 
 - Specification Name, Version and download URL:
@@ -27,7 +27,7 @@ https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck
 
 - Public URL of TCK Results Summary:
 +
-https://docs.payara.fish/community/docs/6.2024.10/Jakarta%20EE%20Certification/6.2024.10/6.2024.10%20(Web%20Profile)%20Core%20TCK%20Results.html[6.2024.10 Core TCK Results]
+https://docs.payara.fish/community/docs/6.2024.11/Jakarta%20EE%20Certification/6.2024.11/6.2024.11%20(Web%20Profile)%20Core%20TCK%20Results.html[6.2024.11 Core TCK Results]
 
 - Any Additional Specification Certification Requirements:
 
