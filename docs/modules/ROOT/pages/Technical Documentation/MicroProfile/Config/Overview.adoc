@@ -27,6 +27,12 @@ NOTE: Where multiple configuration properties exist, the property from a source 
 |90
 |Reads configuration properties from files in a specified directory. Each file name is the configuration property name and the contents of the file are the config property value. This config source can be used to read https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-files-from-a-pod[Kubernetes secrets files]. You can find out more about directory config sources here: xref:/Technical Documentation/MicroProfile/Config/Directory.adoc[Directory Config Sources]
 
+|`toml`
+|95
+|Reads configuration properties from a specified TOML configuration file.
+
+You can find out more about TOML config sources here: xref:Technical Documentation/MicroProfile/Config/TOML.adoc[TOML Config Sources]
+
 |`password`
 |105
 |Retrieves and stores config values in the password alias store. These will be available to all server instances in a domain.
