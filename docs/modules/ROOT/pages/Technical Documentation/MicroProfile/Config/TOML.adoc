@@ -1,11 +1,13 @@
 = TOML Config Source
 
-The TOML Config Source takes configuration properties from TOML configuration file. You can learn more about TOML on: https://toml.io/en/
+The TOML Config Source takes configuration properties from a TOML configuration file.
 
 [[configuration]]
 == Configuration in Payara Server
 
-You can configure TOML Config Source either via the admin console or the _asadmin_ utility. You'll need the path of the TOML configuration file and the maximum recursion depth.
+You can configure TOML Config Source either via the admin console or the _asadmin_ utility.
+
+You'll need the path of the TOML configuration file and the maximum recursion depth.
 
 
 [[from-admin-console]]
@@ -33,11 +35,12 @@ To configure the TOML Config Source from the command line, use these commands:
 
 Provided that all of the above sections are configured correctly, the properties can be injected into any applicable MicroProfile Config injection point as with any other Config Source. They can also be fetched using the asadmin utility.
 
-To prevent StackOverFlow Exceptions, the depth parameter limits the recursion depth when reading properties from the TOML file. If the maximum recursion depth is reached, properties will not be read.
+To prevent `StackOverFlowException` issues, the `depth` parameter limits the recursion depth when reading properties from the TOML file. If the maximum recursion depth is reached, further properties will not be read.
 
-[[toml-example]]
-==== Example - TOML
+[[toml-examples]]
+=== Examples
 
+.Example TOML file
 [source, toml]
 ----
 title = "TOML Example"
@@ -51,22 +54,22 @@ enabled = true
 ports = [ 8000, 8001, 8002 ]
 ----
 
-[[config-provider-example]]
-==== Example - Config Provider
-
+.Retrieving properties programmatically
 [source, java]
 ----
 Config config = ConfigProvider.getConfig();
-
 String ownerName = config.getValue("owner.name", String.class);
 ----
 
-[[inject-example]]
-==== Example - Dependency Injection
-
+.Inject configuration properties
 [source, java]
 ----
 @Inject
 @ConfigProperty(name="database.ports[0]")
 private Optional<Integer> databasePort;
 ----
+
+[[see-also]]
+== See Also
+
+* link:https://toml.io/en/[TOML Documentation]
