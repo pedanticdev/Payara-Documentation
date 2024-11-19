@@ -30,6 +30,12 @@ NOTE: Where multiple configuration properties exist, the property from a source 
 +
 You can find out more about directory config sources here: xref:Technical Documentation/MicroProfile/Config/Directory.adoc[Directory Config Sources]
 
+|`toml`
+|95
+|Reads configuration properties from a specified TOML configuration file.
++
+You can find out more about TOML config sources here: xref:Technical Documentation/MicroProfile/Config/TOML.adoc[TOML Config Sources]
+
 |`password`
 |105
 |Retrieves and stores config values in the password alias store. These will be available to all server instances in a domain.
