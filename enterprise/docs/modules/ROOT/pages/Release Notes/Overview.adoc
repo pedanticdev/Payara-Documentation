@@ -8,6 +8,7 @@ Detailed information about features and fixes in every release.
 
 *2024*
 
+* 2024 November - xref:Release Notes/Release Notes 6.20.0.adoc[Payara Enterprise 6.20.0]
 * 2024 October - xref:Release Notes/Release Notes 6.19.0.adoc[Payara Enterprise 6.19.0]
 * 2024 September - xref:Release Notes/Release Notes 6.18.0.adoc[Payara Enterprise 6.18.0]
 * 2024 August - xref:Release Notes/Release Notes 6.17.0.adoc[Payara Enterprise 6.17.0]
