@@ -884,13 +884,13 @@ asadmin create-ssl [--help]
 ----
 
 [[http-header-validation]]
-=== HTTP Header Validation
+== HTTP Header Validation
 
-The following options can help you to protect against invalid characters on the Http Header Name and Http Header Value content. You can follow the RFC-9110 documentation (See section 5.5 of: https://www.rfc-editor.org/rfc/rfc9110.html)  to understand more about the recommendations.
+The following options can help you to protect against invalid characters on the HTTP Header Name and HTTP Header Value content. You can follow the RFC-9110 documentation (See section 5.5 of: https://www.rfc-editor.org/rfc/rfc9110.html)  to understand more about the recommendations.
 
 IMPORTANT: Currently there is a reported CVE with number  https://www.cve.org/CVERecord?id=CVE-2024-45687[CVE-2024-45687] that indicates a risk when not protecting against invalid characters on the Header Name and Header Value content.
 
-The following options can be set on the Payara Server with the asadmin command as follows:
+The following sections will describe how to configure the new options from grizzly.
 
 *Invalid Characters*
 
@@ -915,15 +915,15 @@ The following table summarize the list of invalid characters that can't be added
 
 *Header Name validation*
 
-To protect against invalid characters on the Http Header Name you need to enable the following property:
+To protect against invalid characters on the HTTP Header Name you need to enable the following property:
 
 
-.Http Header Name Validation
+.HTTP Header Name Validation
 |===
 |Property |Description
 
 |org.glassfish.grizzly.http.STRICT_HEADER_NAME_VALIDATION_RFC_9110
-|This property enable the validation of the Header Name content to prevent any usage of invalid characters on it. By default, this property is set as false on the grizzly implementation. You need to set as true to enable Http Header Name content validation
+|This property enable the validation of the Header Name content to prevent any usage of invalid characters on it. By default, this property is set as false on the grizzly implementation. You need to set as true to enable HTTP Header Name content validation
 
 |===
 
@@ -934,12 +934,14 @@ To set the property you can use the following command:
 asadmin create-jvm-options --target=server-config "-Dorg.glassfish.grizzly.http.STRICT_HEADER_NAME_VALIDATION_RFC_9110\=true"
 ----
 
-To test it you can make a call with curl adding an invalid Http Header Name using invalid characters:
+To test it you can make a call with curl adding an invalid HTTP Header Name using invalid characters:
 
 [source,shell]
 ----
-curl -i -v -H "X-MyHeader\n: hello" myendpoint
+curl -i -v -H $'X-MyHeader\n: hello' myendpoint
 ----
+
+NOTE: The use of the $ symbol and the single quotes on the header descriptions permits to scape the special character. if you don't add you will send each character representation for example \r will be send as '\'char(0x5c) and 'r' char(0x72), not '\r' char(0x0d).
 
 The result of this call with the enabled property will be as follows:
 
@@ -955,21 +957,20 @@ Connection: close
 Content-Length: 0
 < X-Frame-Options: SAMEORIGIN
 X-Frame-Options: SAMEORIGIN
-
 <
 * Closing connection 0
 ----
 
 *Header Value validation*
 
-To protect against invalid characters on the Http Header Value you need to enable the following property:
+To protect against invalid characters on the HTTP Header Value you need to enable the following property:
 
-.Http Header Value Validation
+.HTTP Header Value Validation
 |===
 |Property |Description
 
 |org.glassfish.grizzly.http.STRICT_HEADER_VALUE_VALIDATION_RFC_9110
-|This property enable the validation of the Header Value content to prevent any usage of invalid characters on it. By default, this property is set as false on the grizzly implementation. You need to set as true to enable Http Header Value content validation
+|This property enable the validation of the Header Value content to prevent any usage of invalid characters on it. By default, this property is set as false on the grizzly implementation. You need to set as true to enable HTTP Header Value content validation
 
 |===
 
@@ -980,11 +981,11 @@ To set the property you can use the following command:
 asadmin create-jvm-options --target=server-config "-Dorg.glassfish.grizzly.http.STRICT_HEADER_VALUE_VALIDATION_RFC_9110\=true"
 ----
 
-To test it you can make a call with curl adding an invalid Http Header Value using invalid characters:
+To test it you can make a call with curl adding an invalid HTTP Header Value using invalid characters:
 
 [source,shell]
 ----
-curl -i -v -H "X-MyHeader: hello\n" myendpoint
+curl -i -v -H $'X-MyHeader: he\rllo' myendpoint
 ----
 
 The result of this call with the enabled property will be as follows:
@@ -1001,7 +1002,8 @@ Connection: close
 Content-Length: 0
 < X-Frame-Options: SAMEORIGIN
 X-Frame-Options: SAMEORIGIN
-
 <
 * Closing connection 0
 ----
+
+NOTE: In the case of HTTP Header Value validation this is less restrict than Header Name validation because it is possible to send multiple \n. This will cause to include new line on the value content.
