@@ -1,5 +1,4 @@
 
-
 pipeline {
     agent {
         label 'documentation'
@@ -32,15 +31,33 @@ pipeline {
                     sudo docker run --entrypoint antora -v ${WORKSPACE}:/antora -u 1000 --rm -t ${env.ANTORA_VERSION} generate --stacktrace enterprise-local-playbook.yml
                     """
                 }
-
             }
         }
 
-        stage('Archive Generated Docs') {
+        stage('Archive and Publish Generated Docs') {
             steps {
                 // Archive community and enterprise docs as Jenkins artifacts
                 archiveArtifacts artifacts: 'build/community/html/**', allowEmptyArchive: true
                 archiveArtifacts artifacts: 'build/enterprise/html/**', allowEmptyArchive: true
+
+                // Publish HTML reports
+                publishHTML([
+                    reportName: 'Community Documentation',
+                    reportDir: 'build/community/html',
+                    reportFiles: 'index.html',
+                    keepAll: true,
+                    alwaysLinkToLastBuild: true,
+                    allowMissing: false
+                ])
+
+                publishHTML([
+                    reportName: 'Enterprise Documentation',
+                    reportDir: 'build/enterprise/html',
+                    reportFiles: 'index.html',
+                    keepAll: true,
+                    alwaysLinkToLastBuild: true,
+                    allowMissing: false
+                ])
             }
         }
     }
