@@ -89,16 +89,12 @@ public class AppController {
     @Inject
     Models models;
 
-
     @GET
     public String sayHello() {
-
-
         models.put("greet", "Hello, World! Jakarta MVC");
         models.put("platform", "Jakarta EE 10 on Payara 6 Community");
         models.put("date",  LocalDateTime.now(ZoneOffset.UTC).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
         models.put("message", "Your Jakarta MVC application is running!");
-
 
         return "greet.xhtml";
     }
@@ -107,7 +103,7 @@ public class AppController {
 ----
 
 The AppController is a Jakarta REST resource class, identified as such by the `@Path` annotation.
-T he `@Controller` annotation is from Jakarta MVC, marking all methods in this class as controller methods.
+The `@Controller` annotation is from Jakarta MVC, marking all methods in this class as controller methods.
 A controller method is one that returns a view in the form of a string, as done by the `sayHello()` method, or a `jakarta.ws.rs.core.Response` object that wraps a string object, resolvable to a view.
 
 The `sayHello()` method creates the models for the UI by using the `jakarta.mvc.Models` map.
@@ -120,6 +116,15 @@ The last line of the `sayHello()` method returns `greet.xhtml`.
 This is the UI that will be rendered when the user navigates to the `sayHello()` method.
 For the sample application, the full path is `http://localhost:8080/jakarta-mvc/mvc/app/`, where `jakarta-mvc` is the context path,
 `mvc` is the Jakarta REST root resource path, and `app` is the path to the `sayHello()` method.
+
+[source, java]
+----
+@ApplicationPath("mvc")
+public class RestConfiguration extends Application {
+
+}
+----
+
 The `Models` map instance is automatically available to the view and as such it can access all the values we put into it.
 
 [[the-view]]
@@ -130,7 +135,17 @@ The first and default is the Jakarta Server Pages, or optionally Jakarta Faces.
 As Jakarta Server Pages is no longer a popular technology, this guide will stick to the much more popular Jakarta Faces option.
 The easiest way to tell Jakarta MVC to use Jakarta Faces as the default view technology is to create an empty `faces-config.xml` in the `WEB-INF` folder.
 
-With that done, the `greet.xhtml` facelet is shown next.
+[source, xml]
+----
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config xmlns="https://jakarta.ee/xml/ns/jakartaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-facesconfig_4_0.xsd"
+              version="4.0">
+</faces-config>
+----
+
+With that done, the `greet.xhtml` facelet is shown next. This should be created under a `views` directory in the `WEB-INF` folder.
 
 [source, xml]
 ----
@@ -175,6 +190,38 @@ public class Salutation {
     private String greetingDate;
     private String message;
 
+    public String getGreet() {
+        return greet;
+    }
+
+    public void setGreet(String greet) {
+        this.greet = greet;
+    }
+
+    public String getPlatform() {
+        return platform;
+    }
+
+    public void setPlatform(String platform) {
+        this.platform = platform;
+    }
+
+    public String getGreetingDate() {
+        return greetingDate;
+    }
+
+    public void setGreetingDate(String greetingDate) {
+        this.greetingDate = greetingDate;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
 }
 ----
 
@@ -200,11 +247,10 @@ public class AppController {
     public String salute() {
         String formattedDate = LocalDateTime.now(ZoneOffset.UTC).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 
-        this.salutation
-                .setGreet("Hello, World! Jakarta MVC")
-                .setPlatform("Jakarta EE 10 on Payara 6 Community")
-                .setGreetingDate(formattedDate)
-                .setMessage("Your Jakarta MVC application is running!");
+        salutation.setGreet("Hello, World! Jakarta MVC");
+        salutation.setPlatform("Jakarta EE 10 on Payara 6 Community");
+        salutation.setGreetingDate(formattedDate);
+        salutation.setMessage("Your Jakarta MVC application is running!");
 
         return "salute.xhtml";
     }
@@ -216,7 +262,7 @@ The `AppController` controller has a new method, `salute()`, hosted at the path 
 This method returns the `salute.xhtml` view to render the data. As you can see, the `Models` map is not used anywhere at all.
 The injected `Salutation` instance is automatically available to the view thanks to the `@Named` annotation.
 
-The `salute.xhtml` is shown next.
+The `salute.xhtml` is shown next. This should be created under a `views` directory in the `WEB-INF` folder.
 
 [source, xml]
 ----
