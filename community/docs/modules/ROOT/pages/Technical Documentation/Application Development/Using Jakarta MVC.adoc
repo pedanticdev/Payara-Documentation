@@ -152,7 +152,7 @@ xmlns:h="http://xmlns.jcp.org/jsf/html">
 ----
 
 The greet.xhtml view is a very simple facelet file that is accessing the models to display to the user.
-The models that were put in the `Models` map instance are being accessed through the `#{}` expression, using the key of each value.
+The models that were put in the `Models` map instance are being accessed through the `\#{}` expression, using the key of each value.
 For instance the `#{greet}` will return "Hello, World! Jakarta MVC", as was put in the map.
 Accessing http://localhost:8080/jakarta-mvc/mvc/app/ gives us the response shown below.
 
