@@ -166,7 +166,7 @@ xmlns:h="http://xmlns.jcp.org/jsf/html">
 </html>
 ----
 
-The greet.xhtml view is a very simple facelet file that is accessing the models to display to the user.
+The `greet.xhtml` view is a very simple facelet file that is accessing the models to display to the user.
 The models that were put in the `Models` map instance are being accessed through the `\#{}` expression, using the key of each value.
 For instance the `#{greet}` will return "Hello, World! Jakarta MVC", as was put in the map.
 Accessing http://localhost:8080/jakarta-mvc/mvc/app/ gives us the response shown below.
@@ -289,6 +289,6 @@ The `salute.xhtml` is shown next. This should be created under a `views` directo
 The `salute.xhtml` uses the same `#{}` expression to access the model.
 This time around it calls the getter methods of the various fields.
 The salutation instance is what is CDI makes available automatically.
-This way, the view has access to the model without explicitly using the `Models` map. The `salute` method is hosted at `http://localhost:8080/jakarta-mvc/mvc/app/salute`, which returns the following.
+This way, the view has access to the model without explicitly using the `Models` map. The `salute` method is hosted at http://localhost:8080/jakarta-mvc/mvc/app/salute, which returns the following.
 
 image::mvc/mvc-2.png
