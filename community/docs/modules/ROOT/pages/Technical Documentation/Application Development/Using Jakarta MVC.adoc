@@ -1,5 +1,5 @@
-[[using-jakarta-faces]]
-= Using Jakarta Faces Technology
+[[using-jakarta-mvc]]
+= Using Jakarta MVC
 :ordinal: 25
 
 This chapter describes how to use the Jakarta MVC API, an action-based framework for building web applications using the model view controller architecture pattern.
