@@ -48,6 +48,7 @@ To create a new deployment group using the Admin Console, follow these steps:
 
 . Navigate to the _Deployment Groups_ node in the navigation tree.
 . Click on the _New_ button and give the deployment group a unique name.
+. Alternatively, check the _Auto Name_ box to give the deployment group a random name.
 . From this screen it is also possible to add a number of new server instances if desired:
 +
 image:deployment-groups/deployment-group-new.png[Create New Deployment Group]
