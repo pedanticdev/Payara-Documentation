@@ -1253,7 +1253,7 @@ A string value that specifies whether the `Secure` attribute is included in `JSE
 
 The following options can help you to protect against invalid characters on the HTTP Header Name and HTTP Header Value content. You can follow the RFC-9110 documentation (See section 5.5 of: https://www.rfc-editor.org/rfc/rfc9110.html) to understand more about the recommendations.
 
-The following sections will describe how to configure the new options from grizzly.
+The following sections will describe how to configure the new options from Grizzly.
 
 *Invalid Characters*
 
