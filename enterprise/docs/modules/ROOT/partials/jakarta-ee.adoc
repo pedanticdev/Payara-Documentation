@@ -1,5 +1,8 @@
 .Jakarta EE Certification
 * xref:Jakarta EE Certification/Overview.adoc[Overview]
+* xref:Jakarta EE Certification/5.70.0[5.70.0]
+** xref:Jakarta EE Certification/5.70.0/5.70.0 Platform TCK Results.adoc[5.70.0 Platform TCK Results]
+** xref:Jakarta EE Certification/5.70.0/5.70.0 Web TCK Results.adoc[5.70.0 Web Profile TCK Results]
 * xref:Jakarta EE Certification/5.69.0[5.69.0]
 ** xref:Jakarta EE Certification/5.69.0/5.69.0 Platform TCK Results.adoc[5.69.0 Platform TCK Results]
 ** xref:Jakarta EE Certification/5.69.0/5.69.0 Web TCK Results.adoc[5.69.0 Web Profile TCK Results]
