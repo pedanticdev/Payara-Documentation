@@ -4,7 +4,7 @@
 As required by the https://www.eclipse.org/legal/tck.php[Eclipse Foundation Technology Compatibility Kit License], following is a summary of the TCK results for Payara Server releases for Jakarta EE Core Profile 10.
 
 [[payara-server-results]]
-== Payara Server 7.2024.1.Alpha3 Jakarta EE 10 Core Profile Certification Summary
+== Payara Server 7.2024.1.Alpha3 Jakarta EE 11 Core Profile Certification Summary
 
 - Product Name, Version and download URL (if applicable):
 +
@@ -31,19 +31,12 @@ https://docs.payara.fish/community/docs/7.2024.1.Alpha3/Jakarta%20EE%20Certifica
 
 - Any Additional Specification Certification Requirements:
 
-** Jakarta Concurrency 3.0.2 TCK
-+
-See test results in section `concurrency`. +
-Download URL & SHA-256:
-https://download.eclipse.org/jakartaee/concurrency/3.0/concurrency-tck-3.0.2.zip[concurrency-tck-3.0.2.zip],
-SHA-256:  `22728d729f620d6a85ae903e7d1184e0a7508a4328491b785f1b4f3d7215ca93`
-
 ** Jakarta Contexts and Dependency Injection 4.0.6 TCK
 +
 See test results in section `cdi` and `cdi-lang-model`. +
 Download URL & SHA-256:
-https://download.eclipse.org/ee4j/cdi/4.0/cdi-tck-4.0.6-dist.zip[cdi-tck-4.0.6-dist.zip],
-SHA-256:  `5da8beecb66937d2272fec95fa37a01c5b9b459fcccd5f8f5f12193e6bfd9710`
+https://download.eclipse.org/ee4j/cdi/4.1/cdi-tck-4.1.0-dist.zip[cdi-tck-4.1.0-dist.zip],
+SHA-512:  `6e3967107a7eba503d243d848069fa4e689220bb0ca1f8906fc1dbcae6920f7039e331104432d246e6c026b6f6b41e7a2c840fbd4ac44cbedf78684fbd1b1080`
 
 ** Jakarta Dependency Injection 2.0.2 TCK
 +
@@ -56,8 +49,8 @@ SHA-256: `23bce4317ca061c3de648566cdf65c74b57e1264d6891f366567955d6b834972`
 +
 See test results in section `jaxrs`. +
 Download URL & SHA-256:
-https://download.eclipse.org/jakartaee/restful-ws/3.1/jakarta-restful-ws-tck-3.1.2.zip[jakarta-restful-ws-tck-3.1.2.zip],
-SHA-256: `d854850faf1ab09279f515fef052de5e57afbc591e72d071337e08f0edf41d25`
+https://download.eclipse.org/jakartaee/restful-ws/4.0.0/jakarta-restful-ws-tck-4.0.0.zip[jakarta-restful-ws-tck-4.0.0.zip],
+SHA-512: `f24052b8c8aeae387f99ae6a9264b641ef3e7ce634b5c53065cdf54baa5814f8b8470d76f0eca5116345ff42c140824c6645e208d90a4a359eb34bac3900bd97`
 
 ** Jakarta JSON Binding 3.0.0 TCK
 +
@@ -75,7 +68,7 @@ SHA-256: `949f203de84deffa8c7892b555918e42f1dd220ccb7b6800741ea58af62737c1`
 
 - Java runtime used to run the implementation:
 +
-`OpenJDK Runtime Environment Zulu11.54+25-CA (build 11.0.14.1+1-LTS)`
+`OpenJDK Runtime Environment zulu21.0.3 (build 11.0.14.1+1-LTS)`
 
 
 - Summary of the information for the certification environment:
