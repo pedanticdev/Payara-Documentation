@@ -3,8 +3,8 @@
 
 As required by the https://www.eclipse.org/legal/tck.php[Eclipse Foundation Technology Compatibility Kit License], following is a summary of the TCK results for Payara Server releases for Jakarta EE Core Profile 10.
 
-[[payara-server-web-results]]
-== Payara Server 6.2023.11 (Web Profile) Jakarta EE 10 Core Profile Certification Summary
+[[payara-server-results]]
+== Payara Server 7.2024.1.Alpha3 Jakarta EE 10 Core Profile Certification Summary
 
 - Product Name, Version and download URL (if applicable):
 +
@@ -14,20 +14,20 @@ As required by the https://www.eclipse.org/legal/tck.php[Eclipse Foundation Tech
 |
 {empty} +
 {empty} +
-https://www.payara.fish/downloads/payara-platform-community-edition[Payara Server 6.2023.11 (Web Profile)]
+https://www.payara.fish/downloads/payara-platform-community-edition[Payara Server 7.2024.1.Alpha3]
 |===
 
 - Specification Name, Version and download URL:
 +
-https://jakarta.ee/specifications/coreprofile/10/[Jakarta EE Core Profile 10]
+https://jakarta.ee/specifications/coreprofile/11//[Jakarta EE Core Profile 11]
 - TCK Version, digital SHA-256 fingerprint and download URL:
 +
-https://download.eclipse.org/jakartaee/coreprofile/10.0/jakarta-core-profile-tck-10.0.0.zip[Jakarta EE Core Profile TCK 10.0.0.zip]
+https://download.eclipse.org/jakartaee/coreprofile/11.0/jakarta-core-profile-tck-11.0.0.zip[Jakarta EE Core Profile TCK 11.0.0.zip]
 , SHA-256: `702a84e3c6532fb0aad6a37443bf5e7fadbfb7cf0071271f3a1fdd10cab1229c`
 
 - Public URL of TCK Results Summary:
 +
-https://docs.payara.fish/community/docs/6.2023.11/Jakarta%20EE%20Certification/6.2023.11/6.2023.11%20(Web%20Profile)%20Core%20TCK%20Results.html[6.2023.11 Core TCK Results]
+https://docs.payara.fish/community/docs/7.2024.1.Alpha3/Jakarta%20EE%20Certification/7.2024.1.Alpha3/7.2024.1.Alpha3%20Core%20TCK%20Results.html[7.2024.1.Alpha3 Core TCK Results]
 
 - Any Additional Specification Certification Requirements:
 
@@ -84,14 +84,21 @@ Apache Derby, Linux, Ubuntu 20.04 LTS +
 
 === Test Results
 
+### annotations
+
+```
+    [INFO]  [mvn.test] [INFO] Results:
+    [INFO]  [mvn.test] [INFO]
+    [INFO]  [mvn.test] [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+```
+
 ### cdi
 
 ```
     [INFO]  [mvn.test] [INFO] Results:
     [INFO]  [mvn.test] [INFO]
-    [INFO]  [mvn.test] [INFO] Tests run: 725, Failures: 0, Errors: 0, Skipped: 0
+    [INFO]  [mvn.test] [INFO] Tests run: 779, Failures: 0, Errors: 0, Skipped: 0
 ```
-
 
 ### cdi-lang-model
 
@@ -99,14 +106,6 @@ Apache Derby, Linux, Ubuntu 20.04 LTS +
     Results :
 
     Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-```
-
-### concurrency
-
-```
-    [INFO] Results:
-    [INFO]
-    [INFO] Tests run: 148, Failures: 0, Errors: 0, Skipped: 0
 ```
 
 ### core
@@ -131,7 +130,7 @@ Apache Derby, Linux, Ubuntu 20.04 LTS +
 ```
     [INFO] Results:
     [INFO]
-    [WARNING] Tests run: 2660, Failures: 0, Errors: 0, Skipped: 59
+    [WARNING] Tests run: 2667, Failures: 0, Errors: 0, Skipped: 60
 
     [INFO] Results:
     [INFO]
@@ -143,7 +142,7 @@ Apache Derby, Linux, Ubuntu 20.04 LTS +
 ```
     [INFO] Results:
     [INFO]
-    [WARNING] Tests run: 294, Failures: 0, Errors: 0, Skipped: 5
+    [WARNING] Tests run: 295, Failures: 0, Errors: 0, Skipped: 5
 ```
 
 ### jsonp
