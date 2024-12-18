@@ -1,7 +1,7 @@
 [[tck-results]]
 = TCK Results
 
-As required by the https://www.eclipse.org/legal/tck.php[Eclipse Foundation Technology Compatibility Kit License], following is a summary of the TCK results for Payara Server releases for Jakarta EE Core Profile 10.
+As required by the https://www.eclipse.org/legal/tck.php[Eclipse Foundation Technology Compatibility Kit License], following is a summary of the TCK results for Payara Server releases for Jakarta EE Core Profile 11.
 
 [[payara-server-results]]
 == Payara Server 7.2024.1.Alpha3 Jakarta EE 11 Core Profile Certification Summary
@@ -22,8 +22,8 @@ https://www.payara.fish/downloads/payara-platform-community-edition[Payara Serve
 https://jakarta.ee/specifications/coreprofile/11//[Jakarta EE Core Profile 11]
 - TCK Version, digital SHA-256 fingerprint and download URL:
 +
-https://download.eclipse.org/jakartaee/coreprofile/11.0/jakarta-core-profile-tck-11.0.0.zip[Jakarta EE Core Profile TCK 11.0.0.zip]
-, SHA-256: `702a84e3c6532fb0aad6a37443bf5e7fadbfb7cf0071271f3a1fdd10cab1229c`
+https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakarta-core-profile-tck-11.0.0.zip[Jakarta EE Core Profile TCK 11.0.0.zip]
+, SHA-256: `0357bfab7025972edb2bf50277b6b4206b499a2961bc94e783f34782cc4a9bda`
 
 - Public URL of TCK Results Summary:
 +
