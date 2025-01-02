@@ -102,9 +102,9 @@ set configs.config.server-config.network-config.protocols.protocol.${protocol-na
 ----
 
 [[configuration-http-upload-timeout-millis]]
-==== Connection Upload Timeout 
+==== Connection Upload Timeout
 
-The timeout, in milliseconds, for uploads. 
+The timeout, in milliseconds, for uploads.
 
 TIP: To disable this timeout, set the value to `-1`
 
@@ -220,7 +220,7 @@ The level of compression to be used:
 
 *  `-1` corresponds to the default level
 * `0` is no compression
-* `1` is the best speed 
+* `1` is the best speed
 * `9` is the best compression
 
 *Asadmin Command:*
@@ -576,7 +576,7 @@ set configs.config.server-config.network-config.protocols.protocol.${protocol-na
 [[steams-clean-percent]]
 ==== Streams Clean Percentage
 
-The number of streams to process when the high water mark is exceeded. 
+The number of streams to process when the high water mark is exceeded.
 
 NOTE: Only closed streams will be removed.
 
@@ -882,3 +882,49 @@ asadmin create-ssl [--help]
         [--target target]
         listener-id
 ----
+
+[[http-header-validation]]
+== HTTP Header Fields Validation
+
+By default, The following characters are stipulated to be dangerous to parse in both the name and value of all headers passed down on an HTTP request:
+
+|===
+|Character |Representation
+
+|NUL character
+|This character is expressed in the following forms on a literal value: `\0  \x00` https://en.wikipedia.org/wiki/Null_character[review explanation here]
+
+|LF Character (new line)
+|This character is expressed in the following forms on a literal value: `\n \x0A` https://en.wikipedia.org/wiki/Newline[review explanation here]
+
+|CR Character (carriage return)
+|This character is expressed in the following forms on a literal value: `\r \x0D` https://en.wikipedia.org/wiki/Carriage_return[review explanation here]
+
+|===
+
+As stipulated in section 5.5 Field Values of the link:https://datatracker.ietf.org/doc/html/rfc9110#name-field-values[RFC-9110 specification], these characters are deemed invalid and as such the server, as recipient of the request WILL reject it automatically upon detecting the presence of these characters.
+
+NOTE: On previous RFC specifications that detailed HTTP 1.1 semantics these characters were considered *acceptable*, however starting on RFC-9110, the use of these characters is no longer acceptable for header fields names and values.
+
+In some cases, it might be necessary for backwards compatibility to allow these characters to be processed by the server runtime, so the following Grizzly (HTTP) system properties allow header fields character validation to be turned on/off:
+
+.Grizzly Header Field Validation Properties
+|===
+|Property |Description
+
+|`org.glassfish.grizzly.http.STRICT_HEADER_NAME_VALIDATION_RFC_9110`
+|This property enable the validation of all header field names on incoming HTTP requests to prevent any usage of invalid characters on it.
+
+When set to `true` the presence of these characters will trigger the server to invalidate the request with a `400 - Bad Request` response.
+
+Set to `true` by default.
+
+|`org.glassfish.grizzly.http.STRICT_HEADER_VALUE_VALIDATION_RFC_9110`
+|This property enable the validation of all header field values on incoming HTTP requests to prevent any usage of invalid characters on it.
+
+When set to `true` the presence of these characters will trigger the server to invalidate the request with a `400 - Bad Request` response.
+
+Set to `true` by default.
+
+|===
+
