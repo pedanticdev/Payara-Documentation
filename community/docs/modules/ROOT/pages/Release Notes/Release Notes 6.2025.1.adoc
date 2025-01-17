@@ -35,8 +35,3 @@
 [https://github.com/payara/Payara/pull/7120[FISH-10308]] Payara: Bump `io.projectreactor:reactor-core` from 3.7.0 to 3.7.1
 
 [https://github.com/payara/Payara/pull/7142[FISH-10365]] Payara: Bump `jline.version` from 3.27.1 to 3.28.0
-
-
-
-
-
