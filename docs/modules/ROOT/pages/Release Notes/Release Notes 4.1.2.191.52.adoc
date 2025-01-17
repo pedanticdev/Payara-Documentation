@@ -1,0 +1,11 @@
+= Release Notes - Payara Platform Enterprise 4.1.2.191.52
+
+
+
+== Security Fixes
+* [FISH-9690] Fix HTTP Server incorrectly accepting disallowed characters within header values
+
+
+== Component Upgrades
+
+* [FISH-10089] Upgrade Docker JDK to 8u432
