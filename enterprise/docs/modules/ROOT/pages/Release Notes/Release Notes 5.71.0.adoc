@@ -1,0 +1,34 @@
+= Release notes - Payara Platform Enterprise 5.71.0
+
+== Supported APIs and Applications
+
+* Jakarta EE 8
+* Jakarta EE 8 Applications
+* MicroProfile 4.1
+
+== Improvements
+
+
+* [FISH-10318] Add create-system-property Command
+
+* [FISH-10319] Add create-jvm-option Command
+
+
+== Security Fixes
+
+* [FISH-9690] Fix HTTP Server incorrectly accepting disallowed characters within header values
+
+== Bug Fixes
+
+* [FISH-61] Fix HTTP/2 push failure to serve resources
+
+* [FISH-9034] Fix Payara failure to start OpenMQ Broker in a separate JVM when using LOCAL mode with JDK 11 or later.
+
+* [FISH-10228] Fix environmental entry injection fialure due to NULL value when using `@Resource` with `messageSelector activation-config-property`
+
+
+== Component Upgrades
+
+* [FISH-10311] Payara-Enterprise: Bump com.nimbusds:nimbus-jose-jwt from 9.40 to 9.47
+
+* [FISH-10315] Payara-Enterprise: Bump io.projectreactor:reactor-core from 3.6.10 to 3.7.1
