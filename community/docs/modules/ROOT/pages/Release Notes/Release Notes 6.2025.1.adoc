@@ -24,7 +24,7 @@
 
 [https://github.com/payara/Payara/pull/7140[FISH-61]] Fix HTTP/2 push failure to serve resources
 
-[https://github.com/payara/Payara/pull/7145[FISH-10228]] Fix environmental entry injection fialure due to NULL value when using `@Resource` with `messageSelector activation-config-property`
+[https://github.com/payara/Payara/pull/7145[FISH-10228]] Fix environmental entry injection failure due to NULL value when using `@Resource` with `messageSelector activation-config-property`
 
 
 
