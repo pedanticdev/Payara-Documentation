@@ -66,12 +66,12 @@ Download URL & SHA-256:
 https://download.eclipse.org/jakartaee/jsonb/3.0/jakarta-jsonb-tck-3.0.0.zip[jakarta-jsonb-tck-3.0.0.zip],
 SHA-256: `954fd9a3a67059ddeabe5f51462a6a3b542c94fc798094dd8c312a6a28ef2d0b`
 
-** Jakarta Contexts and Dependency Injection 4.0.13 TCK
+** Jakarta JSON Processing 2.1.1 TCK
 +
-See test results in sections `cdi` and `cdi-lang-model`. +
+See test results in section `jsonp`. +
 Download URL & SHA-256:
-https://download.eclipse.org/ee4j/cdi/4.0/cdi-tck-4.0.13-dist.zip[cdi-tck-4.0.13-dist.zip],
-SHA-256:  `566c547e1a9c66792eefcc6feafea87ab0c0f2e3f71385bf96865359a685df00`
+https://download.eclipse.org/jakartaee/jsonp/2.1/jakarta-jsonp-tck-2.1.1.zip[jakarta-jsonp-tck-2.1.1.zip],
+SHA-256: `949f203de84deffa8c7892b555918e42f1dd220ccb7b6800741ea58af62737c1`
 
 - Java runtime used to run the implementation:
 +
@@ -89,7 +89,7 @@ Apache Derby, Linux, Ubuntu 20.04 LTS +
 ```
     [INFO]  [mvn.test] [INFO] Results:
     [INFO]  [mvn.test] [INFO]
-    [INFO]  [mvn.test] [INFO] Tests run: 725, Failures: 0, Errors: 0, Skipped: 0
+    [INFO]  [mvn.test] [INFO] Tests run: 718, Failures: 0, Errors: 0, Skipped: 0
 ```
 
 
