@@ -1,5 +1,6 @@
 .Eclipse MicroProfile Certification
 * xref:Eclipse MicroProfile Certification/Overview.adoc[Overview]
+* xref:Eclipse MicroProfile Certification/6.22.0/Overview.adoc[6.22.0 TCK Results]
 * xref:Eclipse MicroProfile Certification/6.21.0/Overview.adoc[6.21.0 TCK Results]
 * xref:Eclipse MicroProfile Certification/6.20.0/Overview.adoc[6.20.0 TCK Results]
 * xref:Eclipse MicroProfile Certification/6.19.0/Overview.adoc[6.19.0 TCK Results]
