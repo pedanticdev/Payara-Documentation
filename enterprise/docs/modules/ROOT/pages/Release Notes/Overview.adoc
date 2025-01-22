@@ -6,6 +6,11 @@ Detailed information about features and fixes in every release.
 [[all-release-notes]]
 == All Release Notes
 
+*2025*
+
+* 2025 January - xref:Release Notes/Release Notes 5.71.0.adoc[Payara Enterprise 5.71.0]
+
+
 *2024*
 
 * 2024 December - xref:Release Notes/Release Notes 5.70.0.adoc[Payara Enterprise 5.70.0]
