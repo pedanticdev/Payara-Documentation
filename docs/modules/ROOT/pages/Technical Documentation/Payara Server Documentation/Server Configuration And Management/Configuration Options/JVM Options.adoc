@@ -8,9 +8,11 @@ WARNING: If you use the asadmin multimode, when creating JVM options special cha
 [[creating-jvm-options]]
 == Creating JVM Options
 
-JVM options can be created via the Admin Console, or the `create-jvm-options` asadmin command. The jvm option key value pair must be enclosed in quotation marks.
+JVM options can be created via the Admin Console, the `create-jvm-option` asadmin command, or multiple can be created with the `create-jvm-options` asadmin command. The jvm option key value pair must be enclosed in quotation marks.
 
-*Example:* `asadmin create-jvm-options "-Djava.awt.headless\=true"`
+*Example 1:*:: `asadmin create-jvm-options "-Djava.awt.headless\=true"`
+
+*Example 2:*:: `asadmin create-jvm-option -Xmx2g`
 
 [[deleting-jvm-options]]
 == Deleting JVM Options

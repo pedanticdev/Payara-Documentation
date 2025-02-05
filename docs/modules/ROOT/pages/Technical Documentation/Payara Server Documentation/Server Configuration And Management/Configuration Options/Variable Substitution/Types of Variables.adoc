@@ -13,7 +13,7 @@ Values of system properties can be specified by:
 
 * the JVM (standard JVM properties like `java.home`)
 * Payara Server (a set of predefined variables, such as `com.sun.aas.instanceRoot`)
-* the `create-system-properties` asadmin command (or in the Admin console `System properties` section)
+* the `create-system-property` and `create-system-properties` asadmin commands (or in the Admin console `System properties` section)
 * a JVM option prefixed with `-D`
 
 When custom properties are specified, their value can also contain other variable references. It is therefore possible to define a system property using other system properties or environment variables.
