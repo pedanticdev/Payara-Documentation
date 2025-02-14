@@ -56,7 +56,7 @@ TIP: It's also possible to use the same `cdiDevModeEnabled` property with the `r
 [[asadmin-enabling-all-applications]]
 ===== Enabling for all applications
 
-The CDI Development Mode can be enabled for all applications by setting the `org.jboss.weld.development` system property to `true` with the `create-system-properties` asadmin command:
+The CDI Development Mode can be enabled for all applications by setting the `org.jboss.weld.development` system property to `true` with the `create-system-property` or `create-system-properties` asadmin commands:
 
 [source, shell]
 ----
