@@ -14,7 +14,7 @@
 
 * [https://github.com/payara/Payara/pull/7163[FISH-8646]] Fix deployment failure of Spring Boot 3 apps on Payara Server 6 due to `java.lang.IllegalStateException: CDI not available`
 
-* [https://github.com/payara/Payara/pull/7032[FISH-10049]] Fix EAR application deployment failures caused by CDI issues
+* [https://github.com/payara/Payara/pull/7032[FISH-10049]] [Community Contribution - https://github.com/lprimak[lprimak]] Fix EAR application deployment failures caused by CDI issues
 
 
 == Component Upgrades
