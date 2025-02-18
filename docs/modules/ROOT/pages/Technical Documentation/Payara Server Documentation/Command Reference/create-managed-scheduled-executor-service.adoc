@@ -18,7 +18,7 @@ asadmin [asadmin-options] create-managed-scheduled-executor-service [--help]
         [--corepoolsize corepoolsize]
         [--keepaliveseconds keepaliveseconds]
         [--threadlifetimeseconds threadlifetimeseconds]
-        [--taskqueuecapacity taskqueuecapacity]
+        [--usevirtualthreads={false|true}]
         [--description description]
         [--property property]
         [--target target]
@@ -68,6 +68,10 @@ The default value is 60.
 Specifies the number of seconds that threads can remain in a thread pool before being purged, regardless of whether the number of threads is greater than `corepoolsize` or whether the threads are idle.
 +
 The default value is 0, which means that threads are never purged.
+`--usevirtualthreads`::
+If enabled, virtual threads will be used instead of the default thread pool. They provide a quick creation, minimal overhead and fast thread switching, but executed on a limited "carrying threads". Use virtual threads for tasks, which depend on external resources like database, microservices etc. Do not use them for long calculation. Available only on Java 21 and later.
++
+The default value is `false`.
 `--description`::
 Descriptive details about the resource.
 `--property`::
