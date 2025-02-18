@@ -33,7 +33,7 @@ https://docs.payara.fish/enterprise/docs/6.23.0/Eclipse%20MicroProfile%20Certifi
 
 - Java runtime used to run the implementation:
 +
-Zulu JDK Runtime Environment (version 11.0.14.1)
+Zulu JDK Runtime Environment (version 11.0.19)
 - Summary of the information for the certification environment:
 +
 Jenkins AWS EC2 Linux Cloud, Ubuntu 20.04 LTS +

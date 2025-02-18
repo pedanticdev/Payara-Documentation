@@ -73,12 +73,12 @@ Download URL & SHA-256:
 https://download.eclipse.org/ee4j/cdi/inject/2.0/jakarta.inject-tck-2.0.2-bin.zip[jakarta.inject-tck-2.0.2-bin.zip],
 SHA-256: `23bce4317ca061c3de648566cdf65c74b57e1264d6891f366567955d6b834972`
 
-** Jakarta Faces 4.0.1 TCK
+** Jakarta Faces 4.0.3 TCK
 +
 See test results in section `jsf`. +
 Download URL & SHA-256:
-https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.1.zip[jakarta-faces-tck-4.0.1.zip],
-SHA-256: `117fdbf8aee14ee162cc913ae055621f7e067b0be4dd14c4591be76b90a0dde5`
+https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.3.zip[jakarta-faces-tck-4.0.3.zip],
+SHA-256: `153184ad38e522c45e74e5da7dd01b1f3be485f56e241a72728caa43479b07ec`
 
 ** Jakarta JSON Binding 3.0.0 TCK
 +
@@ -110,7 +110,7 @@ SHA-256: `696776046dfeaed74266a5d1c4dac7fea5437b6f51743b7fe10962dde755ff8f`
 
 - Java runtime used to run the implementation:
 +
-`OpenJDK Runtime Environment Zulu11.54+25-CA (build 11.0.14.1+1-LTS)`
+`OpenJDK Runtime Environment Zulu11.64+19-CA (build 11.0.19+7-LTS)`
 
 
 - Summary of the information for the certification environment:

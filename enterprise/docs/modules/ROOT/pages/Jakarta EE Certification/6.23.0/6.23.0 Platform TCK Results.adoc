@@ -102,12 +102,12 @@ Download URL & SHA-256:
 https://download.eclipse.org/jakartaee/jsonp/2.1/jakarta-jsonp-tck-2.1.1.zip[jakarta-jsonp-tck-2.1.1.zip],
 SHA-256: `949f203de84deffa8c7892b555918e42f1dd220ccb7b6800741ea58af62737c1`
 
-** Jakarta Faces 4.0.1 TCK
+** Jakarta Faces 4.0.3 TCK
 +
 See test results in section `jsf`. +
 Download URL & SHA-256:
-https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.1.zip[jakarta-faces-tck-4.0.1.zip],
-SHA-256: `117fdbf8aee14ee162cc913ae055621f7e067b0be4dd14c4591be76b90a0dde5`
+https://download.eclipse.org/jakartaee/faces/4.0/jakarta-faces-tck-4.0.3.zip[jakarta-faces-tck-4.0.3.zip],
+SHA-256: `153184ad38e522c45e74e5da7dd01b1f3be485f56e241a72728caa43479b07ec`
 
 ** Jakarta Mail 2.1.0 TCK
 +
@@ -130,7 +130,7 @@ Download URL & SHA-256:
 https://download.eclipse.org/jakartaee/security/3.0/jakarta-security-tck-3.0.0.zip[jakarta-security-tck-3.0.0.zip],
 SHA-256: `696776046dfeaed74266a5d1c4dac7fea5437b6f51743b7fe10962dde755ff8f`
 
-** Jakarta XML Binding 4.0.0 TCK
+** Jakarta XML Binding 4.0.1 TCK
 +
 See test results in section `jaxb`. +
 Download URL & SHA-256:
@@ -139,7 +139,7 @@ SHA-256: `146be8dc429eb6271a940bf7652f4e11421be702357dbca2cbd93c09c53fac2e`
 
 - Java runtime used to run the implementation:
 +
-`OpenJDK Runtime Environment Zulu11.54+25-CA (build 11.0.14.1+1-LTS)`
+`OpenJDK Runtime Environment Zulu11.64+19-CA (build 11.0.19+7-LTS)`
 
 
 - Summary of the information for the certification environment:
