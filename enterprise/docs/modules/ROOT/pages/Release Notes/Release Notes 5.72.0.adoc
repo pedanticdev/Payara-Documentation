@@ -14,8 +14,6 @@
 
 * [FISH-10433] Payara-Enterprise: Bump `net.java.dev.jna:jna` from 5.15.0 to 5.16.0
 
-* [FISH-10434] Payara-Enterprise: Bump `jline.version` from 3.27.1 to 3.28.0
-
 * [FISH-10466] Upgrade Docker JDK to 8u442
 
 * [FISH-10467] Upgrade Docker JDK to 11.0.26
@@ -28,4 +26,4 @@
 
 * [FISH-10522] Payara-Enterprise: Bump `org.apache.felix:org.apache.felix.webconsole` from 4.9.8 to 4.9.10
 
-* [FISH-10525] Payara-Enterprise: Bump `jline.version` from 3.28.0 to 3.29.0
+* [FISH-10525] Payara-Enterprise: Upgrade `jline.version` to version 3.29.0
