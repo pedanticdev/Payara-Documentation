@@ -75,8 +75,7 @@ SHA-256: `949f203de84deffa8c7892b555918e42f1dd220ccb7b6800741ea58af62737c1`
 
 - Java runtime used to run the implementation:
 +
-`OpenJDK Runtime Environment Zulu11.54+25-CA (build 11.0.14.1+1-LTS)`
-
+`OpenJDK Runtime Environment Zulu11.64+19-CA (build 11.0.19+7-LTS)`
 
 - Summary of the information for the certification environment:
 +
