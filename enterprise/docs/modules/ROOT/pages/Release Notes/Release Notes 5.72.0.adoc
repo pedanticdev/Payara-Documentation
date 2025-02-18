@@ -1,0 +1,29 @@
+= Release notes - Payara Platform Enterprise 5.72.0
+
+== Supported APIs and Applications
+
+* Jakarta EE 8
+* Jakarta EE 8 Applications
+* MicroProfile 4.1
+
+== Improvements
+* [FISH-8859] Implement Docker Images Graceful Shutdown Support
+
+
+== Component Upgrades
+
+* [FISH-10433] Payara-Enterprise: Bump `net.java.dev.jna:jna` from 5.15.0 to 5.16.0
+
+* [FISH-10466] Upgrade Docker JDK to 8u442
+
+* [FISH-10467] Upgrade Docker JDK to 11.0.26
+
+* [FISH-10468] Upgrade Docker JDK to 17.0.14
+
+* [FISH-10469] Upgrade Docker JDK to 21.0.6
+
+* [FISH-10476] Payara-Enterprise: Bump `io.projectreactor:reactor-core` from 3.7.1 to 3.7.2
+
+* [FISH-10522] Payara-Enterprise: Bump `org.apache.felix:org.apache.felix.webconsole` from 4.9.8 to 4.9.10
+
+* [FISH-10525] Payara-Enterprise: Upgrade `jline.version` to version 3.29.0
