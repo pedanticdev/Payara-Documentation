@@ -96,4 +96,31 @@ asadmin> delete-iiop-listener sample_iiop_listener
 ----
 This example deletes the IIOP listener named `sample_iiop_listener`.
 
+[[configuring-new-orb-fragment-processing]]
+== Configuring the New ORB Fragment Processing
 
+The objective of this functionality is to improve the concurrency mechanism with a new implementation using
+Block API. The benefits of using this mechanism instead of the default one (based on synchronized block of code) 
+are the following:
+
+* Fine-Grained control: We are doing explicit locking and unlocking, this is more precise and efficient than 
+the implementation with synchronized blocks.
+* Use of conditions variables: This allows threads to wait for certain conditions to be met before proceeding.
+* Multiple Object locking: lock can be shared among multiple class instances, allowing you to manage synchronization 
+across this instance more flexible.
+
+NOTE: The Fragment processing happen when a big message is processed by the ORB. If the ORB message is exceeding the default size of 1024 bytes, then the internal fragmentation of the message starts.
+
+To configure the new functionality use the following properties:
+
+.New ORB Fragment Processing Properties
+|===
+|Property |Description
+
+| `com.sun.corba.ee.protocol.enableNewFragmentProcess`
+| This property will enable the new fragment processing. By default, this property is set as `false` to use older implementation based on synchronized block's of code.
+
+| `com.sun.corba.ee.protocol.newFragmentEmptyConditionTimeout`
+| You can use this property to change the timeout for the condition that waits availability of fragments from a request. By default, the timeout is 10000 milliseconds. This property can be used if the com.sun.corba.ee.protocol.enableNewFragmentProcess was enabled. The unit for this property is milliseconds.
+
+|===
