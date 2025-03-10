@@ -106,7 +106,7 @@ are the following:
 * Fine-Grained control: We are doing explicit locking and unlocking, this is more precise and efficient than
 the implementation with synchronized blocks.
 * Use of conditions variables: This allows threads to wait for certain conditions to be met before proceeding.
-* Multiple Object locking: lock can be shared among multiple class instances, allowing you to manage synchronization
+* Multiple Object Locking: A lock can be shared among various class instances, facilitating more flexible management of synchronization between these instances.
 across this instance more flexible.
 
 NOTE: The Fragment processing happens when a big message is processed by the ORB. If the ORB message exceeds the default size of 1024 bytes, then the internal fragmentation of the message starts.
