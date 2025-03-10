@@ -99,15 +99,11 @@ This example deletes the IIOP listener named `sample_iiop_listener`.
 [[configuring-new-orb-fragment-processing]]
 == Configuring the New ORB Fragment Processing
 
-The objective of this functionality is to improve the concurrency mechanism with a new implementation using the
-Lock API. The benefits of using this mechanism instead of the default one (based on synchronized blocks of code) 
-are the following:
+The aim of this functionality is to enhance the concurrency mechanism through a new implementation utilizing the Lock API. The advantages of employing this approach in instead of the default one (which relies on synchronized code blocks) are as follows:
 
-* Fine-Grained control: We are doing explicit locking and unlocking, this is more precise and efficient than 
-the implementation with synchronized blocks.
-* Use of conditions variables: This allows threads to wait for certain conditions to be met before proceeding.
-* Multiple Object locking: lock can be shared among multiple class instances, allowing you to manage synchronization 
-across this instance more flexible.
+* Fine-Grained Control: We are employing explicit locking and unlocking, which is more exact and efficient than the implementation utilizing synchronized blocks.
+* Use of condition variables: This enables threads to await the fulfillment of specific conditions prior to advancing.
+* Multiple Object Locking: A lock can be shared among various class instances, facilitating more flexible management of synchronization between these instances.
 
 NOTE: The Fragment processing happens when a big message is processed by the ORB. If the ORB message exceeds the default size of 1024 bytes, then the internal fragmentation of the message starts.
 
