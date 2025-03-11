@@ -35,6 +35,7 @@
 **** xref:Technical Documentation/Payara Server Documentation/Server Configuration And Management/Concurrency Enhancements/Configuring Managed Thread Factories.adoc[Configuring Managed Thread Factories]
 *** Configuration Options
 **** xref:Technical Documentation/Payara Server Documentation/Server Configuration And Management/Configuration Options/Integrated Certificate Management.adoc[Integrated Certificate Management]
+**** xref:Technical Documentation/Payara Server Documentation/Server Configuration And Management/Configuration Options/Administering the ORB.adoc[Administering the ORB]
 **** xref:Technical Documentation/Payara Server Documentation/Server Configuration And Management/Configuration Options/JVM Options.adoc[JVM Options]
 **** xref:Technical Documentation/Payara Server Documentation/Server Configuration And Management/Configuration Options/Password Aliases.adoc[Password Aliases]
 **** xref:Technical Documentation/Payara Server Documentation/Server Configuration And Management/Configuration Options/Phone Home.adoc[Phone Home]
