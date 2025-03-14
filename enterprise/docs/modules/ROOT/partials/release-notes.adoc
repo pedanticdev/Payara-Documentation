@@ -1,5 +1,6 @@
 .Release Notes
 * xref:Release Notes/Overview.adoc[Overview]
+* xref:Release Notes/Release Notes 6.24.0.adoc[Release Notes 6.24.0]
 * xref:Release Notes/Release Notes 6.23.0.adoc[Release Notes 6.23.0]
 * xref:Release Notes/Release Notes 6.22.0.adoc[Release Notes 6.22.0]
 * xref:Release Notes/Release Notes 6.21.0.adoc[Release Notes 6.21.0]

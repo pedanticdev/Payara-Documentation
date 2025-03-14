@@ -8,6 +8,7 @@ Detailed information about features and fixes in every release.
 
 *2025*
 
+* 2025 March - xref:Release Notes/Release Notes 6.2025.3.adoc[Payara Community 6.2025.3]
 * 2025 February - xref:Release Notes/Release Notes 6.2025.2.adoc[Payara Community 6.2025.2]
 * 2025 January - xref:Release Notes/Release Notes 6.2025.1.adoc[Payara Community 6.2025.1]
 
