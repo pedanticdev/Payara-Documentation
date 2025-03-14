@@ -1,0 +1,34 @@
+= Release Notes - Payara Platform Community 7.2025.1 Alpha 1
+
+== Supported APIs and Applications
+
+* Jakarta EE 11
+* MicroProfile 6.1
+
+
+### Improvements
+
+* [https://github.com/payara/Payara/pull/7187[FISH-9957]] Option to change the default context-root on Payara Micro
+
+* [https://github.com/payara/Payara/pull/7186[FISH-10140]] Create EE 11 Compatible Security Connectors
+
+* [https://github.com/payara/Payara/pull/7230[FISH-10526]] Improve CORBA code to prevent deadlock from pooled threads
+
+### Security Fixes
+
+* [https://github.com/payara/Payara/pull/7240[FISH-10576]] Update JSON Smart to 2.5.2 in Security Connectors
+
+### Bug Fixes
+
+* [https://github.com/payara/Payara/pull/7167[FISH-10138]] Payara 7 Micro & Embedded Broken
+
+* FISH-10596 OSGi Error in Security Connectors
+
+
+
+### Component Upgrades
+
+
+* [https://github.com/payara/Payara/pull/7194[FISH-10585]] Upgrade Concurro to 3.1.0-M5
+
+* [https://github.com/payara/Payara/pull/7196[FISH-10597]] Upgrade Jakarta EE API to 11.0.0-M5

@@ -1,2 +1,5 @@
 .Release Notes
 * xref:Release Notes/Overview.adoc[Overview]
+
+xref:Release Notes/Release Notes 7.2025.1.adoc[Payara Community 7.2025.1]
+

@@ -6,3 +6,7 @@ Detailed information about features and fixes in every release.
 [[all-Release-Notes]]
 == All Release Notes
 
+
+*2025*
+
+* 2025 March - xref:Release Notes/Release Notes 7.2025.1.adoc[Payara Community 7.2025.1]
