@@ -1,0 +1,9 @@
+= Release Notes - Payara Platform Enterprise 4.1.2.191.53
+
+
+== Security Fixes
+* [FISH-10521] Security Vulnerability Report: Cross-site Scripting (Stored)
+
+== Component Upgrades
+
+* [FISH-10466] Upgrade Docker JDK to 8u442
